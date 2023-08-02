@@ -1,0 +1,83 @@
+@font-face {
+    font-family: 'OztrackFont';
+    src: url('font/oztrack.ttf')  format('truetype');
+  }
+
+body {
+    background: #ef4a81;
+    margin: 0 auto;
+    height: 120vh;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.background {
+    display:flex;
+    margin-left: 8%;
+    z-index: -1;
+}
+.slantedimg {
+    clip-path: polygon(15% 5%, 5% 95%, 85% 95%, 95% 5%);
+    transition: 0.4s cubic-bezier(1, -1, 0, 2);
+    float: left;
+    margin-left: -8%;
+    width: 33%;
+    height: auto;
+}
+.slantedimg:hover {
+    clip-path: polygon(10% 0%, 0% 100%, 90% 100%, 100% 0%);
+}
+
+.logo {
+    width: 50%;
+    height: auto;
+}
+
+.press-link {
+    color: #101820;
+    text-decoration: none;
+    font-size: 32pt;
+    font-family: 'OztrackFont';
+}
+@media screen and (max-width: 699px) {
+    .press-link {
+        color: #101820;
+        text-decoration: none;
+        font-size: 24pt;
+        font-family: 'OztrackFont';
+    }
+}
+
+.container {
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: 128px auto;
+    grid-template-areas: 
+    "header header"
+    "content content"
+    "footer footer";  
+}
+
+@media screen and (max-width: 699px) {
+    .container {
+        display: grid;
+        grid-template-rows: 200px auto;
+        grid-template-columns: 100%;
+        grid-template-areas: "header" "content" "footer";
+    }
+}
+
+.header {
+    grid-area: header;
+}
+.content {
+    grid-area: content;
+    height: 90%;
+}
+.footer {
+    grid-area: footer; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: auto;
+}
