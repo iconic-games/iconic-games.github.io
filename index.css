@@ -538,7 +538,7 @@ p {
 
 .logo {
   color: #fff;
-  text-align: left;
+  text-align: center;
   letter-spacing: 8px;
   text-shadow: none;
   object-fit: fill;
@@ -546,7 +546,8 @@ p {
   margin-bottom: 60px;
   margin-left: auto;
   margin-right: auto;
-  padding: 21px;
+  padding-top: 21px;
+  padding-bottom: 21px;
   font-family: Teko, sans-serif;
   font-size: 240px;
   font-weight: 400;
