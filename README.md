@@ -1,0 +1,1 @@
+*NOTE*: please do not remove `CNAME` file - it's a vital component of the DNS setup.
