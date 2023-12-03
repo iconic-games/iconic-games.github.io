@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@900&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family:  Teko, sans-serif;
+	color: white;
+}
+
+html, body, main {
+	width: 100%;
+	height: 100%;
+	background: black;
+}
+
+header {
+  height: 200vh;
+}
+
+.sticky_container {
+	padding: 5rem;
+}
+
+.sticky_parent {
+	height: 500vh;
+}
+
+.sticky {
+	overflow: hidden;
+	position: sticky;
+	top: 0;
+	height: 100vh;
+}
+
+.scroll_section{
+	position: absolute;
+	top: 0;
+	height: 100%;
+	width: 500vw;
+	will-change: transform;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 5vw;
+}
+
+.team_profile {
+	width: 800px;
+	height: 80%;
+	object-fit: cover;
+	object-position: center;
+	display: flex;
+	flex-direction: row;
+}
+
+.team_profile_image {
+	width: 400px;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+}
+
+.team_profile_text {
+	width: 400px;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+	margin-left: 20px;
+	color: white;
+}
+
+.team_profile_text h2 {
+	font-size: 80px;
+	font-weight: 200;
+}
+
+.team_profile_text h3 {
+	font-size: 40px;
+	font-weight: 150;
+}
+
+.container {
+  /* hide fixed overflow contents */
+  clip: rect(0, auto, auto, 0);
+
+  /* does not work if overflow = visible */
+  overflow: hidden;
+
+  /* only works with absolute positioning */
+  position: absolute;
+
+  /* Make sure containers are full-width and height */
+  height: 100vh;
+  left: 0;
+  width: 100%;
+  background: black;
+  
+  /* safari hack */
+  -webkit-mask-image: -webkit-linear-gradient(top, #ffffff 0%,#ffffff 100%);
+}
+
+.container_solid {
+  background: black;
+  
+  /* position this container at the top of its parent element */
+  top: 0;
+}
+
+.title_wrapper {
+  position: fixed;
+  display: block;  
+  margin: auto;
+  width: 100%;
+  /* center the text wrapper vertically */
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.title_wrapper h1 {
+  text-align: center;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: Teko, sans-serif;
+  color: white;
+  letter-spacing: 8px;
+  font-size: 240px;
+  font-weight: 400;
+  object-fit: fill;
+  align-self: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0;
+  font-family: Teko, sans-serif;
+  font-size: 240px;
+  font-weight: 400;
+  display: inline-block;
+	width: 100%;
+}
+
+.container_solid .title_wrapper h1 {
+  background: url(../images/background-new.jpg);
+  background-size: 100vw auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+  /* clip the text if possible */
+  text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  
+  /* fallback text color */
+  color: black;
+}
+
+.container_image {
+  background-image: url(../images/background-new.jpg);
+  background-size:100vw auto;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  
+  /* position the second container below the first container */
+  top: 100vh;
+}
+
+.container_image .title_wrapper h1 {
+  color: white;
+}
+
+section {
+	min-height: 100vh;
+	max-height: 100vh;
+	height: 100vh;
+	padding: 0px;
+	margin: 0px;
+	background: black;
+	color:white;
+	width: 100%;
+}
+
+main h1 {
+	font-size: 120px;
+	font-weight: 300;
+}
+
+section h2 {
+  font-family: Teko, sans-serif;
+  letter-spacing: 4px;
+  font-size: 120px;
+  font-weight: 300;
+}
+
+section p {
+  font-family: Teko, sans-serif;
+}
+
+@media only screen and (max-width: 600px) {
+	.sticky_container {
+		padding: 1rem;
+	}
+	
+	.team_profile {
+		width: 300px;
+	}
+}
