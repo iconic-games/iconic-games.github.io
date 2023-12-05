@@ -23,7 +23,7 @@ header {
 }
 
 .sticky_parent {
-	height: 500vh;
+	height: 350vh;
 }
 
 .sticky {
@@ -31,22 +31,23 @@ header {
 	position: sticky;
 	top: 0;
 	height: 100vh;
+	padding-left: 250px;
 }
 
 .scroll_section{
 	position: absolute;
 	top: 0;
 	height: 100%;
-	width: 500vw;
+	width: auto;
 	will-change: transform;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 0 5vw;
+	padding: 0 100px;
 }
 
 .team_profile {
-	width: 800px;
+	width: auto;
 	height: 80%;
 	object-fit: cover;
 	object-position: center;
@@ -62,7 +63,7 @@ header {
 }
 
 .team_profile_text {
-	width: 400px;
+	width: 500px;
 	height: 100%;
 	object-fit: cover;
 	object-position: center;
@@ -120,23 +121,21 @@ header {
 }
 
 .title_wrapper h1 {
-  text-align: center;
-  text-transform: uppercase;
-  text-align: center;
-  font-family: Teko, sans-serif;
-  color: white;
-  letter-spacing: 8px;
-  font-size: 240px;
-  font-weight: 400;
-  object-fit: fill;
-  align-self: center;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 0;
-  font-family: Teko, sans-serif;
-  font-size: 240px;
-  font-weight: 400;
-  display: inline-block;
+	text-align: center;
+	text-transform: uppercase;
+	text-align: center;
+	font-family: Teko, sans-serif;
+	color: white;
+	letter-spacing: 8px;
+	font-size: 15vw;
+	font-weight: 400;
+	object-fit: fill;
+	align-self: center;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0;
+	font-family: Teko, sans-serif;
+	display: inline-block;
 	width: 100%;
 }
 
@@ -198,12 +197,39 @@ section p {
   font-family: Teko, sans-serif;
 }
 
-@media only screen and (max-width: 600px) {
-	.sticky_container {
-		padding: 1rem;
+@media only screen and (max-width: 600px) {	
+	main h1 {
+		font-size: 40px;
 	}
 	
 	.team_profile {
-		width: 300px;
+		width: auto;
+		flex-direction: column;
+	}
+	
+	.team_profile_image {
+		width: 90vw;
+		height: 50%;
+		margin-left: 10px;
+	}
+
+	.team_profile_text {
+		width: 90vw;
+		height: 50%;
+		margin-left: 10px;
+	}
+
+	.team_profile_text h2 {
+		font-size: 40px;
+		font-weight: 200;
+	}
+
+	.team_profile_text h3 {
+		font-size: 20px;
+		font-weight: 150;
+	}
+	
+	.team_profile_text p {
+		font-size: 14px;
 	}
 }
