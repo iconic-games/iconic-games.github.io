@@ -23,7 +23,8 @@ header {
 }
 
 .sticky_parent {
-	height: 350vh;
+	height: 6934px;
+	width: auto;
 }
 
 .sticky {
@@ -31,6 +32,7 @@ header {
 	position: sticky;
 	top: 0;
 	height: 100vh;
+	width: auto;
 	padding-left: 250px;
 }
 
@@ -43,7 +45,7 @@ header {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 0 100px;
+	padding: 0px 100px;
 }
 
 .team_profile {
@@ -53,6 +55,7 @@ header {
 	object-position: center;
 	display: flex;
 	flex-direction: row;
+	padding: 0 100px;
 }
 
 .team_profile_image {
@@ -141,7 +144,7 @@ header {
 
 .container_solid .title_wrapper h1 {
   background: url(../images/background-new.jpg);
-  background-size: 100vw auto;
+  background-size: auto 100vh;
   background-position: center;
   background-repeat: no-repeat;
   
@@ -157,7 +160,7 @@ header {
 
 .container_image {
   background-image: url(../images/background-new.jpg);
-  background-size:100vw auto;
+  background-size: auto 100vh;
   background-position: center;
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -197,7 +200,7 @@ section p {
   font-family: Teko, sans-serif;
 }
 
-@media only screen and (max-width: 600px) {	
+@media only screen and (max-width: 1000px) {	
 	main h1 {
 		font-size: 40px;
 	}
