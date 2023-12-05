@@ -9,14 +9,16 @@ window.addEventListener('scroll', (e) => {
 function transformStickySection(section) {
 	let stickyParent = section.parentElement;
 	const offsetTop = stickyParent.offsetTop;
+	
 	const scrollSection = section.querySelector('.scroll_section');
+	const scrollHeight = scrollSection.getBoundingClientRect().width;
+	const scrollWidth = scrollHeight - window.innerWidth;
+	stickyParent.style.height = scrollHeight + 'px';
 	
-	const scrollLimit = scrollSection.getBoundingClientRect().width + window.innerHeight - window.innerWidth;
-	stickyParent.style.height = scrollLimit + 'px';
-	
-	
-	let horizontalScroll = (window.scrollY - offsetTop);
-	horizontalScroll = horizontalScroll < 0 ? 0 : horizontalScroll > scrollLimit ? scrollLimit : horizontalScroll;
-	console.log(horizontalScroll + " : " + window.scrollY + " (top:" + offsetTop + " vh:" + window.innerHeight + " limit:" + scrollLimit + ")");
+	const scrollLimit = scrollHeight - window.innerHeight;
+	let horizontalScroll = (window.scrollY - offsetTop) / scrollLimit;
+	horizontalScroll = horizontalScroll < 0 ? 0 : horizontalScroll > 1 ? 1 : horizontalScroll;
+	horizontalScroll *= scrollWidth;
 	scrollSection.style.transform = `translate3d(${-(horizontalScroll)}px, 0, 0)`;
+	console.log(horizontalScroll + " : " + window.scrollY + " (h:" + scrollHeight + " w:" + scrollWidth + " limit:" + scrollLimit + ")");
 }

@@ -33,7 +33,6 @@ header {
 	top: 0;
 	height: 100vh;
 	width: auto;
-	padding-left: 250px;
 }
 
 .scroll_section{
@@ -45,7 +44,6 @@ header {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 0px 100px;
 }
 
 .team_profile {
@@ -55,7 +53,7 @@ header {
 	object-position: center;
 	display: flex;
 	flex-direction: row;
-	padding: 0 100px;
+	padding: 0 25px;
 }
 
 .team_profile_image {
