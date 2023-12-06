@@ -4,6 +4,12 @@ window.addEventListener('scroll', (e) => {
 	for(let i = 0; i < stickysections.length; ++i) {
 		transformStickySection(stickysections[i]);
 	}
+	
+	if(window.scrollY > window.innerHeight) {
+		navbar.hidden = false;
+	} else {
+		navbar.hidden = true;
+	}
 });
 
 function transformStickySection(section) {
