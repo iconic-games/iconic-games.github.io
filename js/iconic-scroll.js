@@ -20,5 +20,4 @@ function transformStickySection(section) {
 	horizontalScroll = horizontalScroll < 0 ? 0 : horizontalScroll > 1 ? 1 : horizontalScroll;
 	horizontalScroll *= scrollWidth;
 	scrollSection.style.transform = `translate3d(${-(horizontalScroll)}px, 0, 0)`;
-	console.log(horizontalScroll + " : " + window.scrollY + " (h:" + scrollHeight + " w:" + scrollWidth + " limit:" + scrollLimit + ")");
 }
