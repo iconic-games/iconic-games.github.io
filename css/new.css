@@ -72,13 +72,30 @@ header {
 }
 
 .team_profile_text h2 {
-	font-size: 80px;
+	font-size: 8vw;
 	font-weight: 200;
+	line-height: 7vw;
 }
 
 .team_profile_text h3 {
-	font-size: 40px;
+	font-size: 5vw;
 	font-weight: 150;
+	line-height: 5vw;
+}
+
+.team_profile p {
+	font-size: 1.25vw;
+}
+
+.team_profile_games {
+	display: flex;
+	justify-content: space-around;
+}
+
+.team_profile_game_image {
+	max-height: 25vh;
+	width: 20%;
+	padding-top: 2vh;
 }
 
 .container {
@@ -201,20 +218,6 @@ section p {
 	main h1 {
 		font-size: 40px;
 	}
-
-	.team_profile_text h2 {
-		font-size: 40px;
-		font-weight: 200;
-	}
-
-	.team_profile_text h3 {
-		font-size: 20px;
-		font-weight: 150;
-	}
-	
-	.team_profile_text p {
-		font-size: 14px;
-	}
 }
 
 @media screen and (orientation:portrait) {
@@ -233,5 +236,21 @@ section p {
 		width: 90vw;
 		height: 50%;
 		margin-left: 10px;
+	}
+	
+	.team_profile_text h2 {
+		font-size: 8vh;
+		font-weight: 200;
+		line-height: 7vh;
+	}
+
+	.team_profile_text h3 {
+		font-size: 5vh;
+		font-weight: 150;
+		line-height: 5vh;
+	}
+
+	.team_profile p {
+		font-size: 1.25vh;
 	}
 }
