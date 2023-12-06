@@ -11,7 +11,7 @@
 html, body, main {
 	width: 100%;
 	height: 100%;
-	background: black;
+	background: #1F1F1F;
 }
 
 header {
@@ -77,14 +77,16 @@ nav a:hover {
 }
 
 .team_profile_image {
-	width: 40vw;
+	width: 16.5vw;
+	min-width: 400px;
 	height: 100%;
 	object-fit: cover;
 	object-position: center;
 }
 
 .team_profile_text {
-	width: 40vw;
+	width: 16.5vw;
+	min-width: 400px;
 	height: 100%;
 	object-fit: cover;
 	object-position: center;
@@ -93,19 +95,19 @@ nav a:hover {
 }
 
 .team_profile_text h2 {
-	font-size: clamp(3rem, 8vw, 8rem);
+	font-size: 5rem;
 	font-weight: 200;
-	line-height: clamp(2.75rem, 7vw, 7.5rem);
+	line-height: 4.5rem;
 }
 
 .team_profile_text h3 {
-	font-size: clamp(2rem, 5vw, 4rem);
+	font-size: 2.5rem;
 	font-weight: 150;
-	line-height: clamp(2rem, 5vw, 4rem);
+	line-height: 2.5rem;
 }
 
 .team_profile p {
-	font-size: clamp(0.5rem, 1vw, 2rem);
+	font-size: 1rem;
 }
 
 .team_profile_games {
@@ -248,14 +250,18 @@ section p {
 	}
 	
 	.team_profile_image {
-		width: 90vw;
-		height: 50%;
+		height: 400px;
+		width: 400px;
+		max-width: 80vw;
+		min-height: 100px;
+		min-width: 100px;
 		margin-left: 10px;
 	}
 
 	.team_profile_text {
-		width: 90vw;
-		height: 50%;
+		width: 400px;
+		max-width: 80vw;
+		min-width: 100px;
 		margin-left: 10px;
 	}
 	
