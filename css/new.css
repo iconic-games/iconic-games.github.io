@@ -56,14 +56,14 @@ header {
 }
 
 .team_profile_image {
-	width: 400px;
+	width: 40vw;
 	height: 100%;
 	object-fit: cover;
 	object-position: center;
 }
 
 .team_profile_text {
-	width: 500px;
+	width: 40vw;
 	height: 100%;
 	object-fit: cover;
 	object-position: center;
@@ -201,7 +201,23 @@ section p {
 	main h1 {
 		font-size: 40px;
 	}
+
+	.team_profile_text h2 {
+		font-size: 40px;
+		font-weight: 200;
+	}
+
+	.team_profile_text h3 {
+		font-size: 20px;
+		font-weight: 150;
+	}
 	
+	.team_profile_text p {
+		font-size: 14px;
+	}
+}
+
+@media screen and (orientation:portrait) {
 	.team_profile {
 		width: auto;
 		flex-direction: column;
@@ -217,19 +233,5 @@ section p {
 		width: 90vw;
 		height: 50%;
 		margin-left: 10px;
-	}
-
-	.team_profile_text h2 {
-		font-size: 40px;
-		font-weight: 200;
-	}
-
-	.team_profile_text h3 {
-		font-size: 20px;
-		font-weight: 150;
-	}
-	
-	.team_profile_text p {
-		font-size: 14px;
 	}
 }
