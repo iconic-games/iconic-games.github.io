@@ -181,7 +181,7 @@ nav a:hover {
 
 .container_solid .title_wrapper h1 {
   background: url(../images/background-new.jpg);
-  background-size: auto 100vh;
+  background-size: 100vw auto;
   background-position: center;
   background-repeat: no-repeat;
   
@@ -197,7 +197,7 @@ nav a:hover {
 
 .container_image {
   background-image: url(../images/background-new.jpg);
-  background-size: auto 100vh;
+  background-size: 100vw auto;
   background-position: center;
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -244,6 +244,14 @@ section p {
 }
 
 @media screen and (orientation:portrait) {
+	.container_solid {
+		background-size: auto 100vh;
+	}
+	
+	.container_image {
+		sbackground-size: auto 100vh;
+	}
+	
 	.team_profile {
 		width: auto;
 		flex-direction: column;
