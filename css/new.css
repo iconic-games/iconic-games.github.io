@@ -271,22 +271,6 @@ section p {
 	.team_profile_text {
 		width: 400px;
 		min-width: 100px;
-		margin-left: 10px;
-	}
-	
-	.team_profile_text h2 {
-		font-size: clamp(3rem, 8vh, 8rem);
-		font-weight: 200;
-		line-height: clamp(2.75rem, 7vh, 7.5rem);
-	}
-
-	.team_profile_text h3 {
-		font-size: clamp(2rem, 5vh, 4rem);
-		font-weight: 150;
-		line-height: clamp(2rem, 5vh, 4rem);
-	}
-
-	.team_profile p {
-		font-size: clamp(1rem, 1vh, 2rem);
-	}
+		margin-top: 10px;
+	}	
 }
