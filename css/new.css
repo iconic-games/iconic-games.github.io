@@ -62,6 +62,7 @@ nav a:hover {
 	width: auto;
 	will-change: transform;
 	display: flex;
+	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
 }
@@ -107,8 +108,16 @@ nav a:hover {
 	line-height: 1.5rem;
 }
 
+.team_profile_text h4 {
+	padding-top: 1rem;
+	font-size: 1.5rem;
+	font-weight: 150;
+	line-height: 1.5rem;
+}
+
 .team_profile p {
 	font-size: 1rem;
+	color: #B7B7B7;
 }
 
 .team_profile_games {
@@ -225,6 +234,7 @@ section {
 main h1 {
 	font-size: 120px;
 	font-weight: 300;
+	padding-left: 1.2rem;
 }
 
 section h2 {
