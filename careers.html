@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html data-wf-page="64ca25a5c6fc8e1f6fda7f39" data-wf-site="64ca25a5c6fc8e1f6fda7cdb"><head>
+<html><head>
 	<meta charset="utf-8">
 	<meta content="width=device-width, initial-scale=1" name="viewport">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 	<link href="css/iconic.css" rel="stylesheet" type="text/css">
 	<link href="css/careers.css" rel="stylesheet" type="text/css">
-	<script src="js/iconic-scroll.js" type="text/javascript"></script>
+	<script src="js/career-scroll.js" type="text/javascript"></script>
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 	
 	<link href="https://fonts.googleapis.com" rel="preconnect">
@@ -19,14 +19,14 @@
 	<title>Careers</title>
 </head>
 <body>
-	<h1>Working at Iconic Games</h1>
+	<h1>Working at Iconic</h1>
 	<img src="images/tavern.png" alt="Hiring" style="max-height: 30vh; min-height: 400px; width: 100%; object-fit: cover;">
 	<nav>
 		<a onclick="showJobs()">Opportunities</a>
 		<a onclick="showCulture()">Working at Iconic</a>
 	</nav>
-	<div id="jobs" class="scroll--simple" align="center">
-		<div class="job_list">
+	<div id="jobs" align="center">
+		<div id="jobs-list" class="job_list">
 			<div class="job_card">
 				<img class="job_image" src="images/job1.png" alt="Chris Heatherly." />
 				<div class="job_text">
@@ -114,7 +114,7 @@
 		}
 	</script>
 	<h2></h2>
-	<div style="margin: 1rem;">
+	<div style="margin: 3rem; position: fixed; bottom: 0;">
 		<ul>
 			<li>
 				<a class="linkedin" href="https://linkedin.com/company/iconic-games">
