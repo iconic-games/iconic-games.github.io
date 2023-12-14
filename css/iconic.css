@@ -19,13 +19,14 @@ nav {
 	text-align: center;
 	width: 100%;
 	box-sizing: border-box;
-	height: 45px;
+	height: 4rem;
 }
 
 nav a {
-  color: white;
-  text-decoration: none;
-  margin: 0px 10px;
+	color: white;
+	font-size: 2rem;
+	text-decoration: none;
+	margin: 0px 10px;
 }
 
 nav a:hover {
