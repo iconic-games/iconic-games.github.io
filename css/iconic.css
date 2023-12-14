@@ -14,7 +14,7 @@ html, body, main {
 }
 
 nav {
-	background-color: #1e1e1e;
+	background-color: rgba(30,30,30,0.61);
 	padding: 10px;
 	text-align: center;
 	width: 100%;
@@ -23,14 +23,14 @@ nav {
 }
 
 nav a {
-	color: white;
+	color: lightgray;
 	font-size: 2rem;
 	text-decoration: none;
 	margin: 0px 10px;
 }
 
 nav a:hover {
-  text-decoration: underline;
+  color: white;
 }
 
 ::-webkit-scrollbar {
