@@ -1,3 +1,5 @@
+let roleId = 0;
+
 const roles = [
 	{
 		name: 'Studio Art Director',
@@ -111,7 +113,12 @@ window.addEventListener('load', function (e) {
 			const role = roles[i];
 			const newRole = document.createElement("div");
 			newRole.className = "job_card";
-			newRole.onclick = () => {window.location.href = "jobdetails.html?id="+i};
+			
+			if(document.getElementById("jd") == null) {
+				newRole.onclick = () => {window.location.href = "jobdetails.html?id="+i};	
+			} else {
+				newRole.onclick = () => {window.location.href = "jobdetails.html?id="+i};
+			}
 
 			const newRoleImage = document.createElement("img");
 			newRoleImage.classList = "job_image";
@@ -135,7 +142,10 @@ window.addEventListener('load', function (e) {
 	const jdElement = document.getElementById("jd");
 	if(jdElement != null) {
 		const urlParams = new URLSearchParams(window.location.search);		
-		const role = roles[urlParams.get('id')];
+		if(urlParams.has('id')) {
+			roleId = urlParams.get('id');
+		}
+		const role = roles[roleId];
 		
 		const roleImage = document.getElementById("job-image");
 		roleImage.src = role.image;
