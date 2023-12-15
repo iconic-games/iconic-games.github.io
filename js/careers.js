@@ -101,7 +101,7 @@ const roles = [
 	},
 ];
 
-const IconicBlurb = "<h2>About Iconic Games</h2><p>Iconic Games are a new AAA studio funded by venture capital and angel investors. Founded by veterans of AAA games and AI experts. We’re seeking to be the first adoptees and proponents of generative AI to allow a small team to dream bigger and deliver amazing experiences to our players.</p><p>We’re a hybrid company that cares about it’s people. We have offices in London and most of the team come into the offices at least three times a week.</p>";
+const IconicBlurb = "<p>Iconic Games are a new AAA studio funded by venture capital and angel investors. Founded by veterans of AAA games and AI experts. We’re seeking to be the first adoptees and proponents of generative AI to allow a small team to dream bigger and deliver amazing experiences to our players.</p><p>We’re a hybrid company that cares about it’s people. We have offices in London and most of the team come into the offices at least three times a week.</p>";
 
 window.addEventListener('load', function (e) {			
 	let jobslist = document.getElementById('jobs-list');
@@ -117,7 +117,9 @@ window.addEventListener('load', function (e) {
 			if(document.getElementById("jd") == null) {
 				newRole.onclick = () => {window.location.href = "jobdetails.html?id="+i};	
 			} else {
-				newRole.onclick = () => {window.location.href = "jobdetails.html?id="+i};
+				newRole.onclick = () => {
+					roleId = i;
+					refreshJobDetails()};
 			}
 
 			const newRoleImage = document.createElement("img");
@@ -145,47 +147,44 @@ window.addEventListener('load', function (e) {
 		if(urlParams.has('id')) {
 			roleId = urlParams.get('id');
 		}
-		const role = roles[roleId];
-		
-		const roleImage = document.getElementById("job-image");
-		roleImage.src = role.image;
-		
-		const roleTitle = document.getElementById("job-title");
-		roleTitle.innerHTML = role.name;
-		
-		const theRole = document.createElement("h2");
-		theRole.innerHTML = "The Role";
-		jdElement.appendChild(theRole);
-		
-		for(duty of role.duties) {
-			const dutyElement = document.createElement("li");
-			dutyElement.innerHTML = duty;
-			jdElement.appendChild(dutyElement);
-		}
-		
-		const theExp = document.createElement("h2");
-		theExp.innerHTML = "Experience Wanted";
-		jdElement.appendChild(theExp);
-		
-		for(item of role.required) {
-			const newElement = document.createElement("li");
-			newElement.innerHTML = item;
-			jdElement.appendChild(newElement);
-		}
-		
-		const theBonus = document.createElement("h2");
-		theBonus.innerHTML = "Bonus Points For";
-		jdElement.appendChild(theBonus);
-		
-		for(item of role.bonus) {
-			const newElement = document.createElement("li");
-			newElement.innerHTML = item;
-			jdElement.appendChild(newElement);
-		}
-		
-		const theBlurb = document.createElement("div");
-		theBlurb.innerHTML = IconicBlurb;
-		jdElement.appendChild(theBlurb);
+		refreshJobDetails();
 	}
 	
 });
+
+function refreshJobDetails() {
+	const role = roles[roleId];
+	
+	const roleImage = document.getElementById("job-image");
+	roleImage.src = role.image;
+
+	const roleTitle = document.getElementById("job-title");
+	roleTitle.innerHTML = role.name;
+
+	const dutiesContainer = document.getElementById("duties");
+	dutiesContainer.innerHTML = "";
+	for(duty of role.duties) {
+		const dutyElement = document.createElement("li");
+		dutyElement.innerHTML = duty;
+		dutiesContainer.appendChild(dutyElement);
+	}
+
+	const requiredContainer = document.getElementById("required");
+	requiredContainer.innerHTML = "";
+	for(item of role.required) {
+		const newElement = document.createElement("li");
+		newElement.innerHTML = item;
+		requiredContainer.appendChild(newElement);
+	}
+
+	const bonusContainer = document.getElementById("bonus");
+	bonusContainer.innerHTML = "";
+	for(item of role.bonus) {
+		const newElement = document.createElement("li");
+		newElement.innerHTML = item;
+		bonusContainer.appendChild(newElement);
+	}
+
+	const theBlurb = document.getElementById("blurb");
+	theBlurb.innerHTML = IconicBlurb;
+}
