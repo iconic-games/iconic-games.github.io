@@ -1,7 +1,30 @@
 body { 
+	display: flex;
+	flex-direction: column;
 	height: 95vh;
 	min-height: 95vh; 
 	max-height: 95vh;
+	overflow: hidden;
+}
+
+.careers-header {
+	background-image: url('../images/tavern.png');
+	height: 600px;
+	max-height: 600px; 
+	width: 100%; 
+	object-fit: cover; 
+	position: relative;
+}
+
+.careers-main {
+	height: 500px;
+	max-height: 500px;
+	min-height: 500px;
+}
+
+.careers-footer {
+	height: auto;
+	min-height: 100px;
 }
 
 .main_title {
@@ -34,7 +57,6 @@ body {
 	display: flex;
 	flex-direction: row;
 	padding: 2px;
-	margin: 20px 0;
 	background: hsla(0,0%,0%,0.83);
 	margin: 0.5rem 0.5rem;
 }
