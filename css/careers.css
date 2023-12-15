@@ -9,7 +9,6 @@ body {
 }
 
 .careers-header {
-	background-image: url('../images/tavern.png');
 	height: 600px;
 	max-height: 600px; 
 	width: 100%; 
@@ -40,33 +39,32 @@ body {
 	display: flex;
 	flex-direction: column;
 	height: 100%;
+	widows: 100%;
 }
 
 .jobpage_header {
-	min-height: 50px;
-	max-height: 50px;
+	background: hsla(0,0%,0%,0.8);
 }
 
 .jobpage_main {
 	height: 100%;
-}
-
-.jobpage_container {
+	width: 100vw;
 	display: flex;
 	flex-direction: row;
+	margin: 0;
+	padding: 0;
 }
 
 .jobpage_list {
 	min-width: 400px;
+	background: hsla(0,0%,0%,0.8);
 }
 
 .jobpage_jd {
-	max-width: 60vw;
 	height: 100%;
-	max-height: 80vh;
 	background: hsla(0,0%,0%,0.83);
 	overflow-y: scroll;
-	padding: 0.5rem;
+	flex-grow: 1;
 }
 
 .jobpage_jd h1 {
