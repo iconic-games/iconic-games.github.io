@@ -65,6 +65,7 @@ body {
 	background: hsla(0,0%,0%,0.83);
 	overflow-y: scroll;
 	flex-grow: 1;
+	padding: 1rem;
 }
 
 .jobpage_jd h1 {
