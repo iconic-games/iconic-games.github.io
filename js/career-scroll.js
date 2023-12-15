@@ -6,12 +6,15 @@ window.addEventListener("wheel", function (e) {
 	
 	var scroller = document.getElementById("jobs").hidden ? cultureScroller : jobScroller;
 	
-	if(e.deltaX != 0) {
-		touch = true;
-	} else if(touch == false)
+	if(scroller != null) 
 	{
-		if (e.deltaY > 0) scroller.scrollLeft += 100;
-		else scroller.scrollLeft -= 100;			
+		if(e.deltaX != 0) {
+			touch = true;
+		} else if(touch == false)
+		{
+			if (e.deltaY > 0) scroller.scrollLeft += 100;
+			else scroller.scrollLeft -= 100;			
+		}
 	}
 });
 

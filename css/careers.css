@@ -66,6 +66,25 @@ body {
 	max-height: 80vh;
 	background: hsla(0,0%,0%,0.83);
 	overflow-y: scroll;
+	padding: 0.5rem;
+}
+
+.jobpage_jd h1 {
+	width: 100%;
+	text-align: center;
+	font-size: 6vw;
+}
+
+.jobpage_jd h2 {
+	font-size: 3rem;
+	margin: 0.25rem;
+	padding: 0;
+}
+
+.jobpage_jd li {
+	font-size: 1.25vw;
+	padding-left: 0.5rem;
+	color: lightgray;
 }
 
 .job_list {
@@ -87,7 +106,7 @@ body {
 	display: flex;
 	flex-direction: row;
 	padding: 2px;
-	background: hsla(0,0%,0%,0.83);
+	background: hsla(0,0%,0%,0.95);
 	margin: 0.5rem 0.5rem;
 	color: lightgray;
 }

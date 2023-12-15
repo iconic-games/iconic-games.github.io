@@ -99,43 +99,83 @@ const roles = [
 	},
 ];
 
-window.addEventListener('load', function (e) {
-	console.log("Loaded");					
+const IconicBlurb = "<h2>About Iconic Games</h2><p>Iconic Games are a new AAA studio funded by venture capital and angel investors. Founded by veterans of AAA games and AI experts. We’re seeking to be the first adoptees and proponents of generative AI to allow a small team to dream bigger and deliver amazing experiences to our players.</p><p>We’re a hybrid company that cares about it’s people. We have offices in London and most of the team come into the offices at least three times a week.</p>";
+
+window.addEventListener('load', function (e) {			
 	let jobslist = document.getElementById('jobs-list');
-	jobslist.replaceChildren();
 	
-	console.log("adding jobs:");
-	console.log(roles);
-	for(i = 0; i < roles.length; ++i) {
-		const role = roles[i];
-		console.log(role);
-		const newRole = document.createElement("div");
-		newRole.className = "job_card";
-		newRole.onclick = function() {window.location.href = "job1.html"};
+	if(jobslist != null) {
+		jobslist.replaceChildren();
+
+		for(let i = 0; i < roles.length; ++i) {
+			const role = roles[i];
+			const newRole = document.createElement("div");
+			newRole.className = "job_card";
+			newRole.onclick = () => {window.location.href = "jobdetails.html?id="+i};
+
+			const newRoleImage = document.createElement("img");
+			newRoleImage.classList = "job_image";
+			newRoleImage.src = role.image;
+			newRole.appendChild(newRoleImage);
+
+			const newRoleSummary = document.createElement("div");
+			newRoleSummary.classList = "job_summary";
+			const newRoleTitle = document.createElement("h1");
+			newRoleTitle.innerHTML = role.name;
+			const newRoleSynopsis = document.createElement("p");
+			newRoleSynopsis.innerHTML = role.synopsis;
+			newRoleSummary.appendChild(newRoleTitle);
+			newRoleSummary.appendChild(newRoleSynopsis);
+			newRole.appendChild(newRoleSummary);
+
+			jobslist.appendChild(newRole);
+		}
+	}
+	
+	const jdElement = document.getElementById("jd");
+	if(jdElement != null) {
+		const urlParams = new URLSearchParams(window.location.search);		
+		const role = roles[urlParams.get('id')];
 		
-		const newRoleImage = document.createElement("img");
-		newRoleImage.classList = "job_image";
-		newRoleImage.src = role.image;
-		newRole.appendChild(newRoleImage);
+		const roleImage = document.getElementById("job-image");
+		roleImage.src = role.image;
 		
-		const newRoleSummary = document.createElement("div");
-		newRoleSummary.classList = "job_summary";
-		const newRoleTitle = document.createElement("h1");
-		newRoleTitle.innerHTML = role.name;
-		const newRoleSynopsis = document.createElement("p");
-		newRoleSynopsis.innerHTML = role.synopsis;
-		newRoleSummary.appendChild(newRoleTitle);
-		newRoleSummary.appendChild(newRoleSynopsis);
-		newRole.appendChild(newRoleSummary);
+		const roleTitle = document.getElementById("job-title");
+		roleTitle.innerHTML = role.name;
 		
-		jobslist.appendChild(newRole);
-		console.log('job added');
+		const theRole = document.createElement("h2");
+		theRole.innerHTML = "The Role";
+		jdElement.appendChild(theRole);
+		
+		for(duty of role.duties) {
+			const dutyElement = document.createElement("li");
+			dutyElement.innerHTML = duty;
+			jdElement.appendChild(dutyElement);
+		}
+		
+		const theExp = document.createElement("h2");
+		theExp.innerHTML = "Experience Wanted";
+		jdElement.appendChild(theExp);
+		
+		for(item of role.required) {
+			const newElement = document.createElement("li");
+			newElement.innerHTML = item;
+			jdElement.appendChild(newElement);
+		}
+		
+		const theBonus = document.createElement("h2");
+		theBonus.innerHTML = "Bonus Points For";
+		jdElement.appendChild(theBonus);
+		
+		for(item of role.bonus) {
+			const newElement = document.createElement("li");
+			newElement.innerHTML = item;
+			jdElement.appendChild(newElement);
+		}
+		
+		const theBlurb = document.createElement("div");
+		theBlurb.innerHTML = IconicBlurb;
+		jdElement.appendChild(theBlurb);
 	}
 	
 });
-
-
-function openJob(i)
-{
-	window.location.href = "job"+i+".html";
-}
