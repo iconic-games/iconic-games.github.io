@@ -5,6 +5,7 @@ body {
 	min-height: 95vh; 
 	max-height: 95vh;
 	overflow: hidden;
+	color: white;
 }
 
 .careers-header {
@@ -32,10 +33,39 @@ body {
 	margin-left: 2rem;
 	margin-bottom: 0;
 	margin-top:0;
+	color: white;
 }
-.full-jd {
+
+.jobpage {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+
+.jobpage_header {
+	min-height: 50px;
+	max-height: 50px;
+}
+
+.jobpage_main {
+	height: 100%;
+}
+
+.jobpage_container {
+	display: flex;
+	flex-direction: row;
+}
+
+.jobpage_list {
+	min-width: 400px;
+}
+
+.jobpage_jd {
 	max-width: 60vw;
-	background: hsla(0,0%,0%,0.83)
+	height: 100%;
+	max-height: 80vh;
+	background: hsla(0,0%,0%,0.83);
+	overflow-y: scroll;
 }
 
 .job_list {
@@ -59,6 +89,11 @@ body {
 	padding: 2px;
 	background: hsla(0,0%,0%,0.83);
 	margin: 0.5rem 0.5rem;
+	color: lightgray;
+}
+
+.job_card:hover {
+	color: white;
 }
 
 .job_image {
@@ -69,14 +104,13 @@ body {
 	object-position: center;
 }
 
-.job_text {
+.job_summary {
 	width: 16.5vw;
 	max-width: 400px;
 	height: 100%;
 	object-fit: cover;
 	object-position: center;
 	margin-left: 20px;
-	color: white;
 	margin-right: 0.5rem;
 }
 

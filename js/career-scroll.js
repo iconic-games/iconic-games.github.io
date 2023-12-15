@@ -6,7 +6,7 @@ window.addEventListener("wheel", function (e) {
 	
 	var scroller = document.getElementById("jobs").hidden ? cultureScroller : jobScroller;
 	
-	if(e.deltaX == 0) {
+	if(e.deltaX != 0) {
 		touch = true;
 	} else if(touch == false)
 	{
