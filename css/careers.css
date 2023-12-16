@@ -9,8 +9,6 @@ body {
 }
 
 .careers-header {
-	height: 600px;
-	max-height: 600px; 
 	width: 100%; 
 	object-fit: cover; 
 	position: relative;
@@ -32,6 +30,7 @@ body {
 	margin-left: 2rem;
 	margin-bottom: 0;
 	margin-top:0;
+	padding: 1rem;
 	color: white;
 }
 
@@ -41,12 +40,12 @@ body {
 	flex-grow: 1;
 	height: 100vh;
 	width: 100vw;
+	background: hsla(0,0%,0%,0.87);
 }
 
 .jobpage_header {
 	display: flex;
 	flex-grow: 0;
-	background: hsla(0,0%,0%,0.8);
 }
 
 .jobpage_main {
@@ -56,14 +55,14 @@ body {
 	flex-direction: row;
 	flex-grow: 1;
 	margin: 0;
-	background: hsla(0,0%,0%,0.8);
+	-webkit-mask-image: linear-gradient(to top, hsla(0,0%,0%,0) 0%, hsla(0,0%,0%,1) 5%, hsla(0,0%,0%,1) 95%, hsla(0,0%,0%,0) 100%);
+	mask-image: linear-gradient(to top, hsla(0,0%,0%,0) 0%, hsla(0,0%,0%,1) 5%, hsla(0,0%,0%,1) 95%, hsla(0,0%,0%,0) 100%);
 }
 
 .jobpage_footer {
 	display: flex;
 	flex-grow: 0;
-	height: 2vh;
-	background: hsla(0,0%,0%,0.8);
+	padding: 1rem;
 }
 
 .jobpage_list {
@@ -72,7 +71,6 @@ body {
 	height: 100%;
 	min-width: 25%;
 	max-width: 25%;
-	background: hsla(0,0%,0%,0.5);
 }
 
 .jobpage_listcontainer {
@@ -88,10 +86,10 @@ body {
 	display: flex;
 	flex-direction: column;
 	height: 100%; 
-	background: hsla(0,0%,0%,0.5);
 	overflow-y: scroll;
 	flex-grow: 1;
 	font-size: 1.25vw;
+	padding: 0 1rem;
 }
 
 .jobpage_jd h1 {
@@ -145,6 +143,7 @@ body {
 	height: auto;
 	object-fit: cover;
 	object-position: center;
+	padding: 1rem;
 }
 
 .job_summary {
