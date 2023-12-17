@@ -53,6 +53,7 @@ body {
 .jobpage_header {
 	display: flex;
 	flex-grow: 0;
+	flex-shrink: 0;
 }
 
 .jobpage_main {
@@ -61,6 +62,7 @@ body {
 	display: flex;
 	flex-direction: row;
 	flex-grow: 1;
+	flex-shrink: 1;
 	margin: 0;
 	-webkit-mask-image: linear-gradient(to top, hsla(0,0%,0%,0) 0%, hsla(0,0%,0%,1) 5%, hsla(0,0%,0%,1) 95%, hsla(0,0%,0%,0) 100%);
 	mask-image: linear-gradient(to top, hsla(0,0%,0%,0) 0%, hsla(0,0%,0%,1) 5%, hsla(0,0%,0%,1) 95%, hsla(0,0%,0%,0) 100%);
@@ -68,7 +70,9 @@ body {
 
 .jobpage_footer {
 	display: flex;
+	width: 100%;
 	flex-grow: 0;
+	flex-shrink: 0;
 	padding: 1rem;
 }
 
@@ -282,61 +286,24 @@ ul li a span {
   position:absolute;
   transition: transform .5s;
 }
-ul li a span:nth-child(1),
-ul li a span:nth-child(3){
-  width:100%;
-  height:3px;
-  background:#404040;
-}
-ul li a span:nth-child(1) {
-  top:0;
-  left:0;
-  transform-origin: right;
-}
-ul li a:hover span:nth-child(1) {
-  transform: scaleX(0);
-  transform-origin: left;
-  transition:transform .5s;
+
+.social {
+	height: 80%;
+	min-height: 80%;
+	max-height: 80%;
+	position: relative;
+	top: 50%;
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+
 }
 
-ul li a span:nth-child(3) {
-  bottom:0;
-  left:0;
-  transform-origin: left;
-}
-ul li a:hover span:nth-child(3) {
-  transform: scaleX(0);
-  transform-origin: right;
-  transition:transform .5s;
-}
-
-ul li a span:nth-child(2),
-ul li a span:nth-child(4){
-  width:3px;
-  height:100%;
-  background:#404040;
-}
-ul li a span:nth-child(2) {
-  top:0;
-  left:0;
-  transform:scale(0);
-  transform-origin: bottom;
-}
-ul li a:hover span:nth-child(2) {
-  transform: scale(1);
-  transform-origin: top;
-  transition:transform .5s;
-}
-ul li a span:nth-child(4) {
-  top:0;
-  right:0;
-  transform:scale(0);
-  transform-origin: top;
-}
-ul li a:hover span:nth-child(4) {
-  transform: scale(1);
-  transform-origin: bottom;
-  transition:transform .5s;
+.fa {
+	display: flex;
+	padding: 10px;
+	max-height: 100%;
+	min-height: 100%;
+	height: 100%;
 }
 
 .facebook:hover {
@@ -345,32 +312,26 @@ ul li a:hover span:nth-child(4) {
 .facebook:hover span { 
   background: #3b5998;
 }
+
 .twitter:hover {
   color: #1da1f2;
 }
 .twitter:hover span { 
   background: #1da1f2;
 }
+
 .instagram:hover {
   color: #c32aa3;
 }
 .instagram:hover span { 
   background: #c32aa3;
 }
+
 .linkedin:hover {
   color: hsla(214,75%,43%,1.00);
 }
 .linkedin:hover span { 
   background: hsla(214,75%,43%,1.00);
-}
-ul li a .twitter {
-  color: #1da1f2;
-}
-ul li a:hover:nth-child(3) {
-  color: #c32aa3;
-}
-ul li a:hover:nth-child(4) {
-  color: #dd4b39;
 }
 
 @media screen and (orientation:portrait) {
@@ -392,6 +353,14 @@ ul li a:hover:nth-child(4) {
 		flex-direction: row;
 	}
 	
+	.jobpage_header {
+		max-height: 5vh;
+	}
+	
+	.jobpage_footer {
+		max-height: 5vh;
+	}
+	
 	.jobpage_main {
 		width: 100vw;
 		flex-direction: column-reverse;
@@ -400,7 +369,9 @@ ul li a:hover:nth-child(4) {
 	}
 
 	.jobpage_list {
-		height: 400px;
+		flex-grow: 0;
+		flex-shrink: 0;
+		height: auto;
 		width: 100%;
 		max-height: none;
 		max-width: none;
@@ -411,6 +382,7 @@ ul li a:hover:nth-child(4) {
 	.jobpage_listcontainer {
 		flex-direction: row;
 		width: 100%;
+		height: auto;
 		overflow-y: hidden;
 		overflow-x: scroll;
 		padding: 0;
@@ -431,6 +403,15 @@ ul li a:hover:nth-child(4) {
 		font-size: 2.25vh;
 	}
 	
+	.jobpage_jd_image {
+		width: 40vw;
+		max-width: 600px;
+		height: auto;
+		object-fit: cover;
+		object-position: center;
+		padding: 1rem;
+	}
+	
 	.jobpage_jd h1 {
 		font-size: 6vh;
 	}
@@ -439,14 +420,14 @@ ul li a:hover:nth-child(4) {
 	}
 		
 	.job_card {
-		display: block;
+		display: flex;
 		position: relative;
 		width: 50vw;
 		min-width: 50vw;
 		max-width: 50vw;
-		height: 30vw;
-		min-height: 30vw;
-		max-height: 30vw;
+		height: 15vh;
+		min-height: 15vh;
+		max-height: 15vh;
 		padding: 0;
 	}
 	
@@ -455,8 +436,6 @@ ul li a:hover:nth-child(4) {
 		min-width: 50vw;
 		max-width: 50vw;
 		height: auto;
-		min-height: none;
-		max-height: 30vw;
 		padding: 0;
 		object-fit: cover;
 	}
