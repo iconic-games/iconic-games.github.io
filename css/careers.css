@@ -150,7 +150,7 @@ body {
 	display: flex;
 	flex-direction: row;
 	width: 95%;
-	overflow-x: hidden;
+	overflow-x: scroll;
 	overflow-y: hidden;
 	-webkit-mask-image: linear-gradient(to left, transparent 0%, #1F1F1F 5%, #1F1F1F 95%, transparent 100%);
 	mask-image: linear-gradient(to left, transparent 0%, black 1%, black 99%, transparent 100%);
@@ -347,7 +347,7 @@ ul li a span {
 		display: flex;
 		width: 95%;
 		overflow-x: hidden;
-		overflow-y: hidden;
+		overflow-y: scroll;
 		-webkit-mask-image: linear-gradient(to left, transparent 0%, #1F1F1F 5%, #1F1F1F 95%, transparent 100%);
 		mask-image: linear-gradient(to left, transparent 0%, black 1%, black 99%, transparent 100%);
 	}
