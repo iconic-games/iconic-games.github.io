@@ -395,6 +395,8 @@ ul li a:hover:nth-child(4) {
 	.jobpage_main {
 		width: 100vw;
 		flex-direction: column-reverse;
+		-webkit-mask-image: none;
+		mask-image: none;
 	}
 
 	.jobpage_list {
