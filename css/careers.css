@@ -76,6 +76,10 @@ body {
 	padding: 1rem;
 }
 
+.jobpage_jobs_title {
+	display: none;	
+}
+
 .jobpage_list {
 	display: flex;
 	flex-direction: column;
@@ -420,6 +424,12 @@ ul li a span {
 	}
 
 	.jobpage_jd li {
+	}
+	
+	.jobpage_jobs_title {
+		display: block;	
+		margin: 0.2rem;
+		background: hsla(0,0%,0%,0.5);
 	}
 		
 	.job_card {
