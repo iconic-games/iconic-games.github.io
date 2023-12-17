@@ -1,6 +1,9 @@
 body { 
 	display: flex;
 	flex-direction: column;
+	width: 100vw;
+	min-width: 100vw;
+	max-width: 100vw;
 	height: 100vh;
 	min-height: 100vh; 
 	max-height: 100vh;
@@ -8,21 +11,25 @@ body {
 	color: white;
 }
 
-.careers-header {
+.careers_header {
+	display: flex;
+	flex-direction: column;
+	flex-grow: 0;
 	width: 100%; 
-	object-fit: cover; 
-	position: relative;
+	object-fit: cover;
 }
 
-.careers-main {
-	height: 500px;
-	max-height: 500px;
-	min-height: 500px;
+.careers_main {
+	height: 1px;
+	width: 100vw;
+	display: flex;
+	flex-grow: 1;
+	margin: 0;
 }
 
-.careers-footer {
-	height: auto;
-	min-height: 100px;
+.careers_footer {
+	display: flex;
+	flex-shrink: 0;
 }
 
 .main_title {
@@ -90,6 +97,7 @@ body {
 	flex-grow: 1;
 	font-size: 1.25vw;
 	padding: 0 1rem;
+	color: lightgrey;
 }
 
 .jobpage_jd_image {
@@ -105,17 +113,22 @@ body {
 	width: 100%;
 	text-align: center;
 	font-size: 6vw;
+	color: whitesmoke;
 }
 
 .jobpage_jd h2 {
 	font-size: 3rem;
 	margin: 0.25rem;
 	padding: 0;
+	color: whitesmoke;
 }
 
 .jobpage_jd li {
 	padding-left: 0.5rem;
-	color: lightgray;
+}
+
+.jobpage_jd_block {
+	background: hsla(0,0%,0%,0.35);
 }
 
 .job_list {
@@ -123,7 +136,7 @@ body {
 	display: flex;
 	flex-direction: row;
 	width: 95%;
-	overflow-x: auto;
+	overflow-x: hidden;
 	overflow-y: hidden;
 	-webkit-mask-image: linear-gradient(to left, transparent 0%, #1F1F1F 5%, #1F1F1F 95%, transparent 100%);
 	mask-image: linear-gradient(to left, transparent 0%, black 1%, black 99%, transparent 100%);
@@ -163,6 +176,7 @@ body {
 	object-position: center;
 	margin-left: 20px;
 	margin-right: 0.5rem;
+	overflow-y: hidden;
 }
 
 .job_text h2 {
@@ -355,12 +369,19 @@ ul li a:hover:nth-child(4) {
 	.job_list {
 		margin: 1rem;
 		display: flex;
-		flex-direction: row;
 		width: 95%;
-		overflow-x: auto;
+		overflow-x: hidden;
 		overflow-y: hidden;
 		-webkit-mask-image: linear-gradient(to left, transparent 0%, #1F1F1F 5%, #1F1F1F 95%, transparent 100%);
 		mask-image: linear-gradient(to left, transparent 0%, black 1%, black 99%, transparent 100%);
+	}
+	
+	.careers_main .job_list {
+		flex-direction: column;
+	}
+	
+	.jobpage_main .job_list {
+		flex-direction: row;
 	}
 	
 	.jobpage_main {
