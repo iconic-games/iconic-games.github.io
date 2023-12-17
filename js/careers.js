@@ -103,7 +103,7 @@ const roles = [
 
 const IconicBlurb = "<p>Iconic Games are a new AAA studio funded by venture capital and angel investors. Founded by veterans of AAA games and AI experts. We’re seeking to be the first adoptees and proponents of generative AI to allow a small team to dream bigger and deliver amazing experiences to our players.</p><p>We’re a hybrid company that cares about it’s people. We have offices in London and most of the team come into the offices at least three times a week.</p>";
 
-window.addEventListener('load', function (e) {			
+window.addEventListener('load', function (e) {	
 	let jobslist = document.getElementById('jobs-list');
 	
 	if(jobslist != null) {

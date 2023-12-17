@@ -131,6 +131,12 @@ body {
 	background: hsla(0,0%,0%,0.35);
 }
 
+.job-list-parent {
+	display: flex;
+	height: 100%;
+	width: 100%;
+}
+
 .job_list {
 	margin: 1rem;
 	display: flex;
