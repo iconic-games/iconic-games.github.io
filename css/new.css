@@ -282,6 +282,10 @@ section p {
 		background-size: auto 100vh;
 	}
 	
+	nav a {
+		font-size: 3vh;
+	}
+	
 	.team_profile {
 		width: auto;
 		height: 90%;
