@@ -90,6 +90,7 @@ body {
 
 .jobpage_listcontainer {
 	display: flex;
+	align-items: center;
 	flex-direction: column; 
 	height: 100px; 
 	flex-grow: 1;
@@ -114,7 +115,8 @@ body {
 	height: auto;
 	object-fit: cover;
 	object-position: center;
-	padding: 1rem;
+	border-radius: 1vw;
+	overflow: hidden;
 }
 
 .jobpage_jd h1 {
@@ -164,12 +166,17 @@ body {
 	width: 22.5vw;
 	min-width: 22.5vw;
 	max-width: 22.5vw;
+	height: 22.5vw;
+	min-height: 22.5vw;
+	max-height: 22.5vw;
 	object-fit: cover;
 	object-position: center;
 	flex-direction: row;
 	background: hsla(0,0%,0%,0.95);
 	margin: 0.5rem 0.5rem;
 	color: lightgray;
+	border-radius: 1vw;
+	overflow: hidden;
 }
 
 .job_card:hover {
@@ -361,11 +368,9 @@ ul li a span {
 	}
 	
 	.jobpage_header {
-		max-height: 5vh;
 	}
 	
 	.jobpage_footer {
-		max-height: 5vh;
 	}
 	
 	.jobpage_main {
@@ -413,10 +418,12 @@ ul li a span {
 	.jobpage_jd_image {
 		width: 40vw;
 		max-width: 600px;
+		flex-grow: 0;
+		flex-shrink: 0;
 		height: auto;
 		object-fit: cover;
 		object-position: center;
-		padding: 1rem;
+		padding: 0;
 	}
 	
 	.jobpage_jd h1 {
