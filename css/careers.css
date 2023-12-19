@@ -172,10 +172,10 @@ body, html, main {
 	position: relative;
 	width: 22.5vw;
 	min-width: 22.5vw;
-	max-width: 22.5vw;
+	max-width: min(22.5vw, 800px);
 	height: 22.5vw;
 	min-height: 22.5vw;
-	max-height: 22.5vw;
+	max-height: min(22.5vw, 800px);
 	object-fit: cover;
 	object-position: center;
 	flex-direction: row;
@@ -434,12 +434,12 @@ ul li a i {
 	.job_card {
 		display: flex;
 		position: relative;
-		width: 50vw;
-		min-width: 50vw;
-		max-width: 50vw;
-		height: 15vh;
-		min-height: 15vh;
-		max-height: 15vh;
+		width: min(50vw, 800px);
+		min-width: min(50vw, 800px);
+		max-width: min(50vw, 800px);
+		height: min(15vh, 800px);
+		min-height: min(15vh, 800px);
+		max-height: min(15vh, 800px);
 		padding: 0;
 	}
 	
@@ -450,9 +450,9 @@ ul li a i {
 	}
 	
 	.job_image {
-		width: 50vw;
-		min-width: 50vw;
-		max-width: 50vw;
+		width: min(50vw, 800px);
+		min-width: min(50vw, 800px);
+		max-width: min(50vw, 800px);
 		height: auto;
 		padding: 0;
 		object-fit: cover;
@@ -462,7 +462,7 @@ ul li a i {
 		display: block;
 		width: 50vw;
 		min-width: 50vw;
-		max-width: 50vw;
+		max-width: auto;
 		height: auto;
 		min-height: none;
 		max-height: 30vw;
