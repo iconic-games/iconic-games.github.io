@@ -39,7 +39,7 @@ body, html, main {
 }
 
 .main_title {
-	font-size: 7.5vw;
+	font-size: 5.5vw;
 	margin-left: 2rem;
 	margin-bottom: 0;
 	margin-top:0;
@@ -111,7 +111,7 @@ body, html, main {
 	height: 100%; 
 	overflow-y: scroll;
 	flex-grow: 1;
-	font-size: 1.25vw;
+	font-size: 1vw;
 	padding: 0 1rem;
 	color: lightgrey;
 }
@@ -129,12 +129,12 @@ body, html, main {
 .jobpage_jd h1 {
 	width: 100%;
 	text-align: center;
-	font-size: 6vw;
+	font-size: 4vw;
 	color: whitesmoke;
 }
 
 .jobpage_jd h2 {
-	font-size: 3rem;
+	font-size: 2.5rem;
 	margin: 0.25rem;
 	padding: 0;
 	color: whitesmoke;
@@ -212,7 +212,7 @@ body, html, main {
 }
 
 .job_summary h2 {
-	font-size: 3rem;
+	font-size: 2rem;
 	font-weight: 200;
 	line-height: 1.5rem;
 }
@@ -395,16 +395,11 @@ ul li a i {
 	.jobpage_jd {
 		display: flex;
 		flex-direction: column;
-		height: 100%; 
+		height: auto; 
 		overflow-y: scroll;
 		flex-grow: 1;
-		font-size: 1.25vw;
+		font-size: clamp(1rem, 1.75vh, 4rem);
 		padding: 0 1rem;
-	}
-	
-	.jobpage_jd {
-		height: auto;
-		font-size: 2.25vh;
 	}
 	
 	.jobpage_jd_image {
@@ -419,7 +414,7 @@ ul li a i {
 	}
 	
 	.jobpage_jd h1 {
-		font-size: 6vh;
+		font-size: 4vh;
 	}
 
 	.jobpage_jd li {
@@ -434,9 +429,9 @@ ul li a i {
 	.job_card {
 		display: flex;
 		position: relative;
-		width: min(50vw, 800px);
+		width: min(75vw, 800px);
 		min-width: min(50vw, 800px);
-		max-width: min(50vw, 800px);
+		max-width: min(75vw, 800px);
 		height: min(15vh, 800px);
 		min-height: min(15vh, 800px);
 		max-height: min(15vh, 800px);
@@ -450,9 +445,9 @@ ul li a i {
 	}
 	
 	.job_image {
-		width: min(50vw, 800px);
+		width: min(75vw, 800px);
 		min-width: min(50vw, 800px);
-		max-width: min(50vw, 800px);
+		max-width: min(75vw, 800px);
 		height: auto;
 		padding: 0;
 		object-fit: cover;
@@ -460,9 +455,7 @@ ul li a i {
 
 	.job_summary {
 		display: block;
-		width: 50vw;
-		min-width: 50vw;
-		max-width: auto;
+		width: 100%;
 		height: auto;
 		min-height: none;
 		max-height: 30vw;
