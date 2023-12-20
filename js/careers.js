@@ -4,7 +4,7 @@ const roles = [
 	{
 		name: 'Studio Art Director',
 		image: 'images/job1.png',
-		synopsis: 'Representing the art team at the highest level in the studio. Must be a great artist, a great person manager and a great person.',
+		synopsis: 'Must be a great artist, a great person manager and a great person.',
 		duties: [
 			'Set the artistic direction for our games.',
 			'Define and communicate the artistic vision for our games.',
@@ -36,7 +36,7 @@ const roles = [
 	{
 		name: 'Principal Character Artist',
 		image: 'images/job-3.png',
-		synopsis: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+		synopsis: 'Like characters? Like art? This could be your perfect role!',
 		duties: [
 		],
 		required: [
@@ -47,7 +47,7 @@ const roles = [
 	{
 		name: 'Principal Environment Artist',
 		image: 'images/job-4.png',
-		synopsis: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+		synopsis: 'Principal, not principle.',
 		duties: [
 		],
 		required: [
@@ -58,7 +58,7 @@ const roles = [
 	{
 		name: 'Principal Animator',
 		image: 'images/job-5.png',
-		synopsis: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+		synopsis: 'Because things that don`t move are boring!',
 		duties: [
 		],
 		required: [
@@ -69,7 +69,7 @@ const roles = [
 	{
 		name: 'Principal Technical Artist',
 		image: 'images/job-2.png',
-		synopsis: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+		synopsis: 'Techno techno techno techno...',
 		duties: [
 		],
 		required: [
@@ -80,7 +80,7 @@ const roles = [
 	{
 		name: 'Game Designer',
 		image: 'images/job-2.png',
-		synopsis: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+		synopsis: 'Designing games. Dream job innit.',
 		duties: [
 		],
 		required: [
@@ -91,7 +91,7 @@ const roles = [
 	{
 		name: 'Senior Game Engineer',
 		image: 'images/job-2.png',
-		synopsis: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+		synopsis: 'Programmer, coder, engineer, whatever.',
 		duties: [
 		],
 		required: [
@@ -103,7 +103,59 @@ const roles = [
 
 const IconicBlurb = "<p>Iconic Games are a new AAA studio funded by venture capital and angel investors. Founded by veterans of AAA games and AI experts. We’re seeking to be the first adoptees and proponents of generative AI to allow a small team to dream bigger and deliver amazing experiences to our players.</p><p>We’re a hybrid company that cares about it’s people. We have offices in London and most of the team come into the offices at least three times a week.</p>";
 
-window.addEventListener('load', function (e) {	
+function measureText(pText, pFontSize, pFamily, pWeight) {
+	var lDiv = document.createElement('div');
+
+	document.body.appendChild(lDiv);
+
+	if (pFamily != null) {
+		lDiv.style.fontFamily = pFamily;
+	}
+	if (pWeight != null) {
+		lDiv.style.fontWeight = pWeight;
+	}
+	lDiv.style.fontSize = "" + pFontSize + "px";
+	lDiv.style.position = "absolute";
+	lDiv.style.left = -1000;
+	lDiv.style.top = -1000;
+
+	lDiv.innerHTML = pText;
+
+	var lResult = {
+		width: lDiv.clientWidth,
+		height: lDiv.clientHeight
+	};
+
+	document.body.removeChild(lDiv);
+	lDiv = null;
+
+	return lResult;
+}
+
+function fitText(el) {
+	var text = el.innerText;
+	var fsize = parseFloat(window.getComputedStyle(el, null).getPropertyValue('font-size'));
+	var fam = window.getComputedStyle(el, null).getPropertyValue('font-family');
+	var weight = window.getComputedStyle(el, null).getPropertyValue('font-weight');
+
+	var available = el.getBoundingClientRect().width * 0.9; // Margin
+	console.log("Fitting Text: " + el.innerText + ":" + available);
+	var measured = measureText(text, fsize, fam, weight);
+	while(measured.width > available) {
+		fsize -= 0.25;
+		measured = measureText(text, fsize, fam, weight);
+	}
+	
+	while(measured.width < available){
+		fsize += 0.25;
+		measured = measureText(text, fsize, fam, weight);
+	}
+	
+	el.style.fontSize = fsize + 'px';
+}
+
+
+window.addEventListener('load', function (e) {
 	let jobslist = document.getElementById('jobs-list');
 	
 	if(jobslist != null) {
@@ -131,8 +183,10 @@ window.addEventListener('load', function (e) {
 			newRoleSummary.classList = "job_summary";
 			const newRoleTitle = document.createElement("h1");
 			newRoleTitle.innerHTML = role.name;
+			newRoleTitle.classList = "fitText";
 			const newRoleSynopsis = document.createElement("p");
 			newRoleSynopsis.innerHTML = role.synopsis;
+			newRoleSynopsis.classList = "fitText";
 			newRoleSummary.appendChild(newRoleTitle);
 			newRoleSummary.appendChild(newRoleSynopsis);
 			newRole.appendChild(newRoleSummary);
@@ -149,6 +203,18 @@ window.addEventListener('load', function (e) {
 		}
 		refreshJobDetails();
 	}
+	
+	let ro = new ResizeObserver(entries => {
+		entries.forEach(entry => {fitText(entry.target);});
+	});
+	
+	var fitTextElements = document.getElementsByClassName("fitText");
+	for(var i = 0; i < fitTextElements.length; ++i) {
+		const fitTextElement = fitTextElements[i];
+		fitText(fitTextElement);
+		ro.observe(fitTextElement);
+	}
+	
 	
 });
 
