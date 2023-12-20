@@ -13,6 +13,11 @@ window.addEventListener('scroll', (e) => {
 });
 
 function transformStickySection(section) {
+	const navHeight = navbar.getBoundingClientRect().height;
+	section.style.top = navHeight + 'px';
+	section.style.height = window.innerHeight - navHeight + 'px';
+	
+	
 	let stickyParent = section.parentElement;
 	const offsetTop = stickyParent.offsetTop;
 	
