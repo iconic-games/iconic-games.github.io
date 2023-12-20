@@ -21,7 +21,6 @@ header {
 nav {
 	position: fixed;
 	top: 0;
-	font-size: clamp(2rem, 2vw, 2.5rem);
 }
 
 .nav_fade_in {
@@ -265,10 +264,6 @@ section p {
 	
 	.container_image {
 		background-size: auto 100vh;
-	}
-	
-	nav a {
-		font-size: 2.5rem;
 	}
 	
 	.team_profile {

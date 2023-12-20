@@ -59,3 +59,9 @@ nav a:hover {
 ::-webkit-scrollbar-thumb:active{
 	background: rgba(255,255,255,.9);
 }
+
+@media screen and (orientation:portrait) {	
+	nav {
+		font-size: 5vw;
+	}
+}
