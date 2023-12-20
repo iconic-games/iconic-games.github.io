@@ -19,24 +19,8 @@ header {
 }
 
 nav {
-	background-color: #1e1e1e;
-	padding: 10px;
-	text-align: center;
-	width: 100%;
 	position: fixed;
 	top: 0;
-	box-sizing: border-box;
-}
-
-nav a {
-	color: white;
-	text-decoration: none;
-	margin: 0px 10px;
-	font-size: 2vh;
-}
-
-nav a:hover {
-  text-decoration: underline;
 }
 
 .nav_fade_in {
@@ -283,7 +267,7 @@ section p {
 	}
 	
 	nav a {
-		font-size: 3rem;
+		font-size: 2.5rem;
 	}
 	
 	.team_profile {
