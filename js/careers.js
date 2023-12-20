@@ -199,16 +199,17 @@ function fitText(el) {
 	var fsize = parseFloat(window.getComputedStyle(el, null).getPropertyValue('font-size'));
 	var fam = window.getComputedStyle(el, null).getPropertyValue('font-family');
 	var weight = window.getComputedStyle(el, null).getPropertyValue('font-weight');
-
 	var available = el.getBoundingClientRect().width * 0.9; // Margin
-	console.log("Fitting Text: " + el.innerText + ":" + available);
+	var oneRem = parseInt(getComputedStyle(document.documentElement).fontSize);
+	var maxFont = el.tagName.toLowerCase() == 'h1' ? oneRem * 4 : oneRem * 2;
+	
 	var measured = measureText(text, fsize, fam, weight);
-	while(measured.width > available) {
+	while(measured.width > available && fsize > oneRem) {
 		fsize -= 0.25;
 		measured = measureText(text, fsize, fam, weight);
 	}
 	
-	while(measured.width < available){
+	while(measured.width < available && fsize < maxFont){
 		fsize += 0.25;
 		measured = measureText(text, fsize, fam, weight);
 	}

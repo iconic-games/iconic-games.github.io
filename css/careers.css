@@ -190,6 +190,10 @@ body, html, main {
 	color: white;
 }
 
+.job_card h1 {
+	margin: 0;
+}
+
 .job_image {
 	width: 100%;
 	height: auto;
