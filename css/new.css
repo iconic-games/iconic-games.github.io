@@ -21,6 +21,7 @@ header {
 nav {
 	position: fixed;
 	top: 0;
+	font-size: clamp(2rem, 2vw, 2.5rem);
 }
 
 .nav_fade_in {
