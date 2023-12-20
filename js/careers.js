@@ -229,6 +229,7 @@ function fitText(el) {
 	}
 	
 	el.style.fontSize = fsize + 'px';
+	return fsize;
 }
 
 
@@ -282,7 +283,23 @@ window.addEventListener('load', function (e) {
 	}
 	
 	let ro = new ResizeObserver(entries => {
-		entries.forEach(entry => {fitText(entry.target);});
+		let minFontSizeH1 = 160;
+		let minFontSizeP = 160;
+		entries.forEach(entry => {
+			let fontSize = fitText(entry.target);
+			if(entry.target.tagName.toUpperCase() == 'P') {
+				minFontSizeP = fontSize;
+			} else if(fontSize < minFontSizeH1) {
+				minFontSizeH1 = fontSize;
+			}
+		});
+		entries.forEach(entry => {
+			if(entry.target.tagName.toUpperCase() == 'P') {
+				entry.target.style.fontSize = minFontSizeP + 'px';
+			} else {
+				entry.target.style.fontSize = minFontSizeH1 + 'px';
+			}
+		});
 	});
 	
 	var fitTextElements = document.getElementsByClassName("fitText");

@@ -146,14 +146,28 @@ rootElement {
 }
 
 .jobpage_jd h2 {
-	font-size: 2.5rem;
+	font-size: 1.75rem;
 	margin: 0.25rem;
 	padding: 0;
 	color: whitesmoke;
 }
 
-.jobpage_jd li {
-	padding-left: 0.5rem;
+ul li {
+	display: flex;
+	flex-direction: row;
+	list-style-position: inside;
+}
+
+.jobpage_jd li:before {
+    font: normal normal normal 14px/1 FontAwesome;
+    content: "\f054";
+    margin-right: 7px;
+    margin-top: 0.5rem;
+}
+
+.jobpage_jd ul {
+	display: flex;
+	flex-direction: column;
 }
 
 .jobpage_jd_block {
@@ -418,7 +432,7 @@ ul li a i {
 		padding: 0 1rem;
 	}
 	
-	jdImage {
+	#jdImage {
 		width: 40vw;
 		max-width: 600px;
 		flex-grow: 0;
@@ -429,7 +443,7 @@ ul li a i {
 		padding: 0;
 	}
 	
-	.jobpage_jd h1 {
+	#jdTitle {
 		font-size: 4vh;
 	}
 
