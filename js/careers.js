@@ -37,11 +37,26 @@ const roles = [
 		name: 'Principal Character Artist',
 		image: 'images/job-3.png',
 		synopsis: 'Like characters? Like art? This could be your perfect role!',
+		overview: 'We are looking for someone who can help us define the next generation of game characters. You will collaboration with the Art Director and wider team to define, develop and maintain character assets. As one of the first artists joining a new game studio you will help to develop pipelines and processes, define the artistic style and company culture.\nEveryone who joins Iconic becomes an owner of the studio with a meaningful percentage of company stock, giving you real skin in the game!',
 		duties: [
+			'Create beautiful character art from concept art, 3D scan data and reference materials',
+			'With the Art Director, help define and set the artistic style and vision for the game.',
+			'Embrace AI as a way to enhance human creativity, not replace it.',
+			'Develop best practices for our character pipeline',
+			'Adapt to the concept and style of the project',
+			'Collaborate with other disciplines departments (Animators Technical Artists and Designers)',
+			'Coach and mentor junior staff.',
 		],
 		required: [
+			'Shipped at least one title as a character artist.',
+			'Worked on at least three AAA titles.',
+			'Strong foundational artistic skills.',
+			'A portfolio of work demonstrating artistic direction and high competency creating asset for AAA games.',
+			'Strong communication skills.',
 		],
 		bonus: [
+			'Shipped titles on UE4/UE5.',
+			'Worked on at least one open world title.',
 		]
 	},
 	{
@@ -49,10 +64,25 @@ const roles = [
 		image: 'images/job-4.png',
 		synopsis: 'Principal, not principle.',
 		duties: [
+			'Create high-quality environments in keeping with the project’s visual direction.',
+			'With the Art Director, help define and set the artistic style and vision for the game.',
+			'Embrace AI as a way to enhance human creativity, not replace it.',
+			'Develop best practices for our art pipelines.',
+			'Model assets using reference photographs and concept Art materials.',
+			'Troubleshoot assets and action creative feedback.',
+			'Collaborate with other disciplines such as World Design, Lighting and VFX.',
+			'Coach and mentor junior staff.',
 		],
 		required: [
+			'Shipped at least one title as an environment artist.',
+			'Worked on at least three AAA titles.',
+			'Strong foundational artistic skills.',
+			'A portfolio of work demonstrating artistic direction and high competency creating asset for AAA games.',
+			'Strong communication skills.',
 		],
 		bonus: [
+			'Shipped titles on UE4/UE5.',
+			'Worked on at least one open world title.',
 		]
 	},
 	{
@@ -60,21 +90,53 @@ const roles = [
 		image: 'images/job-5.png',
 		synopsis: 'Because things that don`t move are boring!',
 		duties: [
+			'Collaborate closely with the Creative Director, Art Director and wider team to define the animation style of our game.',
+			'Set a clear animation vision as well as quality targets, leading with hands-on craft and providing feedback and notes as needed.',
+			'Embrace AI as a way to enhance human creativity, not replace it.',
+			'Explore and define animated action sequences with cinematic camera work.',
+			'Create animation assets for highly iterative gameplay prototypes.',
+			'Develop and refine Style and Process Guides',
+			'Constantly champion animation as a way to enhance the player’s experience, always seeking new, innovative ways to push the envelope.',
+			'Coach and mentor junior staff.',
 		],
 		required: [
+			'Shipped at least one title as a animator.',
+			'Worked on at least three AAA titles.',
+			'Strong foundational artistic skills.',
+			'A portfolio of work demonstrating artistic direction and high competency creating asset for AAA games.',
+			'Strong communication skills.',
 		],
 		bonus: [
+			'Shipped titles on UE4/UE5.',
+			'Worked on at least one open world title.',
 		]
 	},
 	{
 		name: 'Principal Technical Artist',
 		image: 'images/job-2.png',
 		synopsis: 'Techno techno techno techno...',
+		overview: 'As the Principal Technical Artist you will be responsible for analyzing game content and levels from a performance standpoint and setting budgets, standards, and best practices for cutting edge real-time projects resulting in the highest quality content running at target framerates on target hardware.\nEveryone who joins Iconic becomes an owner of the studio with a meaningful percentage of company stock, giving you real skin in the game!',
 		duties: [
+			'Drive improvements and maintain the toolchain for art asset creation and optimization that meet the team’s needs.',
+			'Innovate techniques in asset creation that get the best visual results from the target platform.',
+			'Instigate high-level art-related decisions throughout the development cycle regarding art-related project risks.',
+			'Train other artists in best practices, tools and processes.',
+			'Optimize scenes and assets and find creative solutions to ensure an optimal player experience.',
+			'Research and implement technical improvements to our pipeline.',
+			'Advocate for the adoption of AI in ways that help enhance human creativity, not replace it.',
+			'Provide technical tools and guidance to ensure art assets meet performance and quality standards.',
+			'Coach and mentor junior staff.',
 		],
 		required: [
+			'Shipped at least one title as a technical artist.',
+			'Worked on at least three AAA titles.',
+			'Strong foundational artistic skills.',
+			'A portfolio of work demonstrating artistic direction and high competency creating asset for AAA games.',
+			'Strong communication skills.',
 		],
 		bonus: [
+			'Shipped titles on UE4/UE5.',
+			'Worked on at least one open world title.',
 		]
 	},
 	{
@@ -221,36 +283,30 @@ window.addEventListener('load', function (e) {
 function refreshJobDetails() {
 	const role = roles[roleId];
 	
-	const roleImage = document.getElementById("job-image");
-	roleImage.src = role.image;
+	jdImage.src = role.image;
+	jdTitle.innerHTML = role.name;	
+	jdOverview.innerHTML = role.overview == undefined ? "" : role.overview;
 
-	const roleTitle = document.getElementById("job-title");
-	roleTitle.innerHTML = role.name;
-
-	const dutiesContainer = document.getElementById("duties");
-	dutiesContainer.innerHTML = "";
+	jdDuties.innerHTML = "";
 	for(duty of role.duties) {
 		const dutyElement = document.createElement("li");
 		dutyElement.innerHTML = duty;
-		dutiesContainer.appendChild(dutyElement);
+		jdDuties.appendChild(dutyElement);
 	}
 
-	const requiredContainer = document.getElementById("required");
-	requiredContainer.innerHTML = "";
+	jdRequired.innerHTML = "";
 	for(item of role.required) {
 		const newElement = document.createElement("li");
 		newElement.innerHTML = item;
-		requiredContainer.appendChild(newElement);
+		jdRequired.appendChild(newElement);
 	}
 
-	const bonusContainer = document.getElementById("bonus");
-	bonusContainer.innerHTML = "";
+	jdBonus.innerHTML = "";
 	for(item of role.bonus) {
 		const newElement = document.createElement("li");
 		newElement.innerHTML = item;
-		bonusContainer.appendChild(newElement);
+		jdBonus.appendChild(newElement);
 	}
 
-	const theBlurb = document.getElementById("blurb");
-	theBlurb.innerHTML = IconicBlurb;
+	jdBlurb.innerHTML = IconicBlurb;
 }
