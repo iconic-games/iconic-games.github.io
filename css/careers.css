@@ -15,6 +15,13 @@ body, html, main {
 	max-height: 100dvh;
 	overflow: hidden;
 	color: white;
+	transition: 2s;
+}
+
+rootElement {
+	background-repeat: no-repeat; 
+	background-position: top; 
+	background-size: cover;
 }
 
 .careers_header {

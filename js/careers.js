@@ -5,6 +5,7 @@ const roles = [
 		name: 'Studio Art Director',
 		image: 'images/job1.png',
 		synopsis: 'Must be a great artist, a great person manager and a great person.',
+		bg: 'url(images/studio2.png)',
 		duties: [
 			'Set the artistic direction for our games.',
 			'Define and communicate the artistic vision for our games.',
@@ -38,6 +39,7 @@ const roles = [
 		image: 'images/job-3.png',
 		synopsis: 'Like characters? Like art? This could be your perfect role!',
 		overview: 'We are looking for someone who can help us define the next generation of game characters. You will collaboration with the Art Director and wider team to define, develop and maintain character assets. As one of the first artists joining a new game studio you will help to develop pipelines and processes, define the artistic style and company culture.\nEveryone who joins Iconic becomes an owner of the studio with a meaningful percentage of company stock, giving you real skin in the game!',
+		bg: 'url(images/studio2.png)',
 		duties: [
 			'Create beautiful character art from concept art, 3D scan data and reference materials',
 			'With the Art Director, help define and set the artistic style and vision for the game.',
@@ -63,6 +65,7 @@ const roles = [
 		name: 'Principal Environment Artist',
 		image: 'images/job-4.png',
 		synopsis: 'Principal, not principle.',
+		bg: 'url(images/studio2.png)',
 		duties: [
 			'Create high-quality environments in keeping with the project’s visual direction.',
 			'With the Art Director, help define and set the artistic style and vision for the game.',
@@ -89,6 +92,7 @@ const roles = [
 		name: 'Principal Animator',
 		image: 'images/job-5.png',
 		synopsis: 'Because things that don`t move are boring!',
+		bg: 'url(images/studio2.png)',
 		duties: [
 			'Collaborate closely with the Creative Director, Art Director and wider team to define the animation style of our game.',
 			'Set a clear animation vision as well as quality targets, leading with hands-on craft and providing feedback and notes as needed.',
@@ -116,6 +120,7 @@ const roles = [
 		image: 'images/job-2.png',
 		synopsis: 'Techno techno techno techno...',
 		overview: 'As the Principal Technical Artist you will be responsible for analyzing game content and levels from a performance standpoint and setting budgets, standards, and best practices for cutting edge real-time projects resulting in the highest quality content running at target framerates on target hardware.\nEveryone who joins Iconic becomes an owner of the studio with a meaningful percentage of company stock, giving you real skin in the game!',
+		bg: 'url(images/studio2.png)',
 		duties: [
 			'Drive improvements and maintain the toolchain for art asset creation and optimization that meet the team’s needs.',
 			'Innovate techniques in asset creation that get the best visual results from the target platform.',
@@ -143,6 +148,7 @@ const roles = [
 		name: 'Game Designer',
 		image: 'images/job-2.png',
 		synopsis: 'Designing games. Dream job innit.',
+		bg: 'url(images/steampunk.png)',
 		duties: [
 		],
 		required: [
@@ -154,6 +160,7 @@ const roles = [
 		name: 'Senior Game Engineer',
 		image: 'images/job-2.png',
 		synopsis: 'Programmer, coder, engineer, whatever.',
+		bg: 'url(images/steampunk.png)',
 		duties: [
 		],
 		required: [
@@ -287,6 +294,11 @@ function refreshJobDetails() {
 	jdImage.src = role.image;
 	jdTitle.innerHTML = role.name;	
 	jdOverview.innerHTML = role.overview == undefined ? "" : role.overview;
+	
+	rootElement.style.background = role.bg;
+	rootElement.style.backgroundRepeat = "no-repeat";
+	rootElement.style.backgroundPosition = "top"; 
+	rootElement.style.backgroundSize = "cover";
 
 	jdDuties.innerHTML = "";
 	for(duty of role.duties) {
