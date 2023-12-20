@@ -30,6 +30,7 @@ rootElement {
 	flex-grow: 0;
 	width: 100%; 
 	object-fit: cover;
+	object-position: center;
 }
 
 .careers_main {
@@ -123,21 +124,25 @@ rootElement {
 	color: lightgrey;
 }
 
-.jobpage_jd_image {
-	width: 16.5vw;
-	max-width: 600px;
-	height: auto;
+#jdImage {
+	width: 100%;
+	min-width: 100%; 
+	max-height: min(20vh, 800px);
 	object-fit: cover;
-	object-position: center;
-	border-radius: 1vw;
-	overflow: hidden;
 }
 
-.jobpage_jd h1 {
+#jdTitle {
+	position: absolute;
+	bottom: 0;
+	left: 0; 
 	width: 100%;
+	margin: 0; 
+	padding: 0; 
 	text-align: center;
 	font-size: 4vw;
+	line-height: 1em; 
 	color: whitesmoke;
+	background-color: rgba(30,30,30,0.71);
 }
 
 .jobpage_jd h2 {
@@ -413,7 +418,7 @@ ul li a i {
 		padding: 0 1rem;
 	}
 	
-	.jobpage_jd_image {
+	jdImage {
 		width: 40vw;
 		max-width: 600px;
 		flex-grow: 0;

@@ -4,6 +4,7 @@ const roles = [
 	{
 		name: 'Studio Art Director',
 		image: 'images/job1.png',
+		imageWide: 'images/job-1w.png',
 		synopsis: 'Must be a great artist, a great person manager and a great person.',
 		bg: 'url(images/studio2.png)',
 		duties: [
@@ -37,6 +38,7 @@ const roles = [
 	{
 		name: 'Principal Character Artist',
 		image: 'images/job-3.png',
+		imageWide: 'images/job-3w.png',
 		synopsis: 'Like characters? Like art? This could be your perfect role!',
 		overview: 'We are looking for someone who can help us define the next generation of game characters. You will collaboration with the Art Director and wider team to define, develop and maintain character assets. As one of the first artists joining a new game studio you will help to develop pipelines and processes, define the artistic style and company culture.\nEveryone who joins Iconic becomes an owner of the studio with a meaningful percentage of company stock, giving you real skin in the game!',
 		bg: 'url(images/studio2.png)',
@@ -64,6 +66,7 @@ const roles = [
 	{
 		name: 'Principal Environment Artist',
 		image: 'images/job-4.png',
+		imageWide: 'images/job-4w.png',
 		synopsis: 'Principal, not principle.',
 		bg: 'url(images/studio2.png)',
 		duties: [
@@ -91,6 +94,7 @@ const roles = [
 	{
 		name: 'Principal Animator',
 		image: 'images/job-5.png',
+		imageWide: 'images/job-5w.png',
 		synopsis: 'Because things that don`t move are boring!',
 		bg: 'url(images/studio2.png)',
 		duties: [
@@ -118,6 +122,7 @@ const roles = [
 	{
 		name: 'Principal Technical Artist',
 		image: 'images/job-2.png',
+		imageWide: 'images/job-2w.png',
 		synopsis: 'Techno techno techno techno...',
 		overview: 'As the Principal Technical Artist you will be responsible for analyzing game content and levels from a performance standpoint and setting budgets, standards, and best practices for cutting edge real-time projects resulting in the highest quality content running at target framerates on target hardware.\nEveryone who joins Iconic becomes an owner of the studio with a meaningful percentage of company stock, giving you real skin in the game!',
 		bg: 'url(images/studio2.png)',
@@ -147,6 +152,7 @@ const roles = [
 	{
 		name: 'Game Designer',
 		image: 'images/job-2.png',
+		imageWide: 'images/job-2w.png',
 		synopsis: 'Designing games. Dream job innit.',
 		bg: 'url(images/steampunk.png)',
 		duties: [
@@ -159,6 +165,7 @@ const roles = [
 	{
 		name: 'Senior Game Engineer',
 		image: 'images/job-2.png',
+		imageWide: 'images/job-2w.png',
 		synopsis: 'Programmer, coder, engineer, whatever.',
 		bg: 'url(images/steampunk.png)',
 		duties: [
@@ -291,7 +298,7 @@ window.addEventListener('load', function (e) {
 function refreshJobDetails() {
 	const role = roles[roleId];
 	
-	jdImage.src = role.image;
+	jdImage.src = role.imageWide;
 	jdTitle.innerHTML = role.name;	
 	jdOverview.innerHTML = role.overview == undefined ? "" : role.overview;
 	
