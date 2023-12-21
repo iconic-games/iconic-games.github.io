@@ -10,7 +10,7 @@ const roles = [
 		duties: [
 			'Set the artistic direction for our games.',
 			'Define and communicate the artistic vision for our games.',
-			'Work with the wider leadership team to ensure games visuals serve gameplay and narrative needs and technical requirements.',
+			'Work with the wider leadership team to ensure game visuals serve gameplay and narrative needs and technical requirements.',
 			'Work with production to plan and prioritise artistic deliverables and manage and reduce risk to project.',
 			'Work with talent acquisition to build a true AAA art team of the highest caliber.',
 			'Review artistic output and give constructive feedback.',
@@ -95,7 +95,7 @@ const roles = [
 		name: 'Principal Animator',
 		image: 'images/job-5.png',
 		imageWide: 'images/job-5ws.png',
-		synopsis: 'Because things that don`t move are boring!',
+		synopsis: 'Because things that don’t move are boring!',
 		bg: 'url(images/studio2.png)',
 		duties: [
 			'Collaborate closely with the Creative Director, Art Director and wider team to define the animation style of our game.',
@@ -168,11 +168,30 @@ const roles = [
 		imageWide: 'images/job-2w.png',
 		synopsis: 'Programmer, coder, engineer, whatever.',
 		bg: 'url(images/steampunk.png)',
+		overview: 'As one of the first engineers in a small but growing team you’ll have the opportunity to work across the game as we build the first proof of concept. You’ll be able to contribute not just technically but creatively too in a studio that doesn’t just talk about collaboration in job interviews. We value proactivity and as a senior engineer you’ll design and take game systems from concept to release as well as helping to shape engineering and company culture.',
 		duties: [
+			'Working mainly in C++ to deliver game systems.',
+			'Champion a strong and practical software engineering approach.',
+			'Own complex initiatives spanning, leading from start to finish.',
+			'Advocate for the adoption of AI in ways that help enhance human creativity, not replace it.',
+			'Understand the full game dev process, and flexibly fill gaps.',
+			'Collaborate with your cross-disciplinary peers. Communicate clearly both synchronously and asynchronously.',
+			'Coach and mentor junior staff.',
 		],
 		required: [
+			'Demonstrable C++ expertise.',
+			'Worked on at least 3 shipped games.',
+			'Ability to understand the technical requirements for the game and deliver them.',
+			'Great communication. Comfortable specifying a task with designers, collaborating on a shared codebase with engineers, giving and receiving feedback.',
+			'Understand when a rapid prototype is needed to quickly test an idea and when a system needs detailed planning and design.',
+			'An understanding of the human elements of software engineering: empathy, compassion, and patience.',
+			'A curiosity for learning new tools, technologies, and ways of working.',
+			'A love of video games.',
 		],
 		bonus: [
+			'Knowledge of multiple game systems and their potential advantages and pitfalls.',
+			'Shipped titles on UE4/UE5.',
+			'Worked on at least one open world title.',
 		]
 	},
 ];
