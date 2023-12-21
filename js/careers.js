@@ -252,7 +252,7 @@ function fitText(el) {
 }
 
 
-window.addEventListener('load', function (e) {
+document.addEventListener('DOMContentLoaded', function (e) {
 	let jobslist = document.getElementById('jobs-list');
 	
 	if(jobslist != null) {
