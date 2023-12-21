@@ -6,14 +6,14 @@ window.addEventListener('scroll', (e) => {
 	}
 	
 	if(window.scrollY > window.innerHeight) {
-		navbar.hidden = false;
+		mainNav.hidden = false;
 	} else {
-		navbar.hidden = true;
+		mainNav.hidden = true;
 	}
 });
 
 function transformStickySection(section) {
-	const navHeight = navbar.getBoundingClientRect().height;
+	const navHeight = mainNav.getBoundingClientRect().height;
 	section.style.top = navHeight + 'px';
 	section.style.height = window.innerHeight - navHeight + 'px';
 	
