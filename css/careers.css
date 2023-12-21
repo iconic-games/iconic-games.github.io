@@ -156,13 +156,14 @@ ul li {
 	display: flex;
 	flex-direction: row;
 	list-style-position: inside;
+	align-items: center;
+	margin-left: 1rem;
 }
 
 .jobpage_jd li:before {
     font: normal normal normal 14px/1 FontAwesome;
     content: "\f054";
     margin-right: 7px;
-    margin-top: 0.5rem;
 }
 
 .jobpage_jd ul {
