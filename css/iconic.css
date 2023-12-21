@@ -17,16 +17,18 @@ html, body, main {
 }
 
 nav {
+	display: flex;
 	padding: 0 0.25vh;
 	text-align: center;
 	width: 100%;
 	box-sizing: border-box;
 	height: auto;
 	background-color: rgba(0,0,0,0.9);
-	font-size: clamp(2rem, 2vw, 4rem);
+	font-size: clamp(2rem, 1.5vw, 3rem);
 }
 
 nav a {
+	display: flex;
 	color: lightgray;
 	text-decoration: none;
 	text-align: center;
@@ -41,7 +43,13 @@ nav a:hover {
   color: white;
 }
 
-#mainNav a:after {
+#mainNavContent {
+	display: flex;
+	flex-direction: row;
+	margin-left: 5vw;
+}
+
+#mainNavContent a:after {
     content: "/";
     font-weight: 700;
     color: transparent;
@@ -49,15 +57,15 @@ nav a:hover {
     padding-left: 15px;
 }
 
-#mainNav a:nth-of-type(2):after {
+#mainNavContent a:nth-of-type(1):after {
     color: #6b1b45;
 }
 
-#mainNav a:nth-of-type(3):after {
+#mainNavContent a:nth-of-type(2):after {
     color: #1b6b45;
 }
 
-#mainNav a:nth-of-type(4):after {
+#mainNavContent a:nth-of-type(3):after {
 	color: #1b456b;
 }
 
@@ -83,5 +91,10 @@ nav a:hover {
 @media screen and (orientation:portrait) {	
 	nav {
 		font-size: 5vw;
+	}
+	
+	#mainNavContent {
+		position: absolute;
+		right: 0px;
 	}
 }
