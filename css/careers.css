@@ -313,64 +313,6 @@ ul li {
 	font-size: 1rem;
 }
 
-ul {
-  margin:0;
-  padding:0;
-  display:flex;
-}
-ul li {
-  list-style:none;
-}
-ul li a {
-	display:block;
-	position:relative;
-	width:20vw;
-	max-width:100px;
-	height:20vw;
-	max-height: 60px;
-	font-size: min(10vw, 40px);
-	text-align:center;
-	text-decoration:none;
-	color:#404040;
-	transition:.5s;
-}
-ul li a i {
-  position:absolute;
-}
-
-.fa {
-	display: flex;
-	padding: 10px 0;
-}
-
-.facebook:hover {
-  color: #3b5998;
-}
-.facebook:hover span { 
-  background: #3b5998;
-}
-
-.twitter:hover {
-  color: #1da1f2;
-}
-.twitter:hover span { 
-  background: #1da1f2;
-}
-
-.instagram:hover {
-  color: #c32aa3;
-}
-.instagram:hover span { 
-  background: #c32aa3;
-}
-
-.linkedin:hover {
-  color: hsla(214,75%,43%,1.00);
-}
-.linkedin:hover span { 
-  background: hsla(214,75%,43%,1.00);
-}
-
 @media screen and (orientation:portrait) {
 	.job_list {
 		margin: 1rem;
