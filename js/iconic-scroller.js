@@ -1,41 +1,38 @@
 let touch = false;
 
-window.addEventListener('load', function (e) {
-	var wheelScrollers = document.getElementsByClassName("iconic_scroller");
-	for(var i = 0; i < wheelScrollers.length; ++i) {
-		var scroller = wheelScrollers[i];
-		scroller.onmouseover = () => {
-			scroller.classList.add("iconic_hovered");
-		};
-		scroller.onmouseout = () => {
-			scroller.classList.remove("iconic_hovered");
+let hoverScroller = null;
+
+document.addEventListener('mousemove', e => {
+	hoverScroller = document.elementFromPoint(e.clientX, e.clientY);
+	while(hoverScroller != null) {
+		if(hoverScroller.classList.contains("iconic_scroller")) {
+			break;
 		}
+		hoverScroller = hoverScroller.parentElement;
 	}
-});
+	
+}, {passive: true})
 
 window.addEventListener("wheel", e => {
 	e.preventDefault();
 	e.stopImmediatePropagation();
 	
-	var scrollers = document.getElementsByClassName("iconic_scroller");
-	for(var i = 0; i < scrollers.length; ++i) {
-		var scroller = scrollers[i];
-		if(scroller.hidden == false && scroller.classList.contains("iconic_hovered")) {
-			if(scroller.classList.contains("iconic_horizontal")) {
-				if(e.deltaX != 0) {
-					touch = true;
-					scroller.scrollLeft += e.deltaX;
-				} else if(touch == false) {
-					if (e.deltaY > 0) scroller.scrollLeft += 100;
-					else scroller.scrollLeft -= 100;			
-				}
-				else {
-					scroller.scrollLeft += e.deltaX;
-				}
-			} else {
-				scroller.scrollTop += e.deltaY;
+	if(e.deltaX != 0) {
+		touch = true;
+	}
+	
+	if(hoverScroller != null) {
+		if(hoverScroller.classList.contains("iconic_horizontal")) {
+			if(touch == false) {
+				if (e.deltaY > 0) hoverScroller.scrollLeft += 100;
+				else hoverScroller.scrollLeft -= 100;			
 			}
-		}
+			else {
+				hoverScroller.scrollLeft += e.deltaX;
+			}
+		} else {
+			hoverScroller.scrollTop += e.deltaY;
+		}	
 	}
 }, {passive: false});
 

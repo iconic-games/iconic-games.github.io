@@ -34,6 +34,7 @@ span a {
 p {
 	font-size: 1.25rem;
 	font-weight: 100;
+	word-wrap: break-word;
 }
 
 nav {
@@ -166,6 +167,19 @@ ul li a i {
 .linkedin:hover span { 
   background: hsla(214,75%,43%,1.00);
 }
+
+.horizontal_scroller {
+	display: flex;
+	flex-direction: row;
+	overflow-x: scroll;
+	overflow-y: hidden;
+}
+
+.vertical_scroller {
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+
 
 @media screen and (orientation:portrait) {	
 	nav {
