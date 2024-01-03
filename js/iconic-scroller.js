@@ -24,9 +24,13 @@ window.addEventListener("wheel", e => {
 			if(scroller.classList.contains("iconic_horizontal")) {
 				if(e.deltaX != 0) {
 					touch = true;
+					scroller.scrollLeft += e.deltaX;
 				} else if(touch == false) {
 					if (e.deltaY > 0) scroller.scrollLeft += 100;
 					else scroller.scrollLeft -= 100;			
+				}
+				else {
+					scroller.scrollLeft += e.deltaX;
 				}
 			} else {
 				scroller.scrollTop += e.deltaY;
