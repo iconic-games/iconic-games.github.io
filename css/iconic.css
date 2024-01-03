@@ -6,6 +6,7 @@
 
 * {
 	font-family:  Teko, sans-serif;
+	color: whitesmoke;
 }
 
 html, body, main {
@@ -14,6 +15,25 @@ html, body, main {
 	background: #1F1F1F;
 	padding: 0;
 	margin: 0;
+}
+
+.action {
+	border: double;
+	border-color: white;
+	border-width: 1px;
+	border-radius: 12px;
+	border-collapse: inear-gradient(90deg,rgba(59,132,152,.7) 0%,rgba(107,27,69,.8) 100%);
+}
+
+span a {
+	padding: 0.5rem;
+	text-decoration: none;
+	font-size: 1.25rem;
+}
+
+p {
+	font-size: 1.25rem;
+	font-weight: 100;
 }
 
 nav {
