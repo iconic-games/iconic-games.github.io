@@ -14,22 +14,18 @@ document.addEventListener('mousemove', e => {
 }, {passive: true})
 
 window.addEventListener("wheel", e => {
+	if(e.deltaX != 0 || touch == true) {
+		touch = true;
+		return;
+	}
+	
 	e.preventDefault();
 	e.stopImmediatePropagation();
 	
-	if(e.deltaX != 0) {
-		touch = true;
-	}
-	
 	if(hoverScroller != null) {
 		if(hoverScroller.classList.contains("iconic_horizontal")) {
-			if(touch == false) {
-				if (e.deltaY > 0) hoverScroller.scrollLeft += 100;
-				else hoverScroller.scrollLeft -= 100;			
-			}
-			else {
-				hoverScroller.scrollLeft += e.deltaX;
-			}
+			if (e.deltaY > 0) hoverScroller.scrollLeft += 100;
+			else hoverScroller.scrollLeft -= 100;			
 		} else {
 			hoverScroller.scrollTop += e.deltaY;
 		}	
