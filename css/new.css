@@ -128,43 +128,48 @@ nav {
 }
 
 .container {
-  /* hide fixed overflow contents */
-  clip: rect(0, auto, auto, 0);
+	/* hide fixed overflow contents */
+	clip: rect(0, auto, auto, 0);
 
-  /* does not work if overflow = visible */
-  overflow: hidden;
+	/* does not work if overflow = visible */
+	overflow: hidden;
 
-  /* only works with absolute positioning */
-  position: absolute;
+	/* only works with absolute positioning */
+	position: absolute;
 
-  /* Make sure containers are full-width and height */
-  height: 100vh;
-  left: 0;
-  width: 100%;
-  background: black;
-  
-  /* safari hack */
-  -webkit-mask-image: -webkit-linear-gradient(top, #ffffff 0%,#ffffff 100%);
+	/* Make sure containers are full-width and height */
+	height: 100vh;
+	left: 0;
+	width: 100%;
+	background: black;
+
+	/* safari hack */
+	-webkit-mask-image: -webkit-linear-gradient(top, #ffffff 0%,#ffffff 100%);
 }
 
 .container_solid {
-  background: black;
-  
-  /* position this container at the top of its parent element */
-  top: 0;
+	background: black;
+
+	/* position this container at the top of its parent element */
+	top: 0;
+}
+
+h1 {
+	line-height: normal;
 }
 
 .title_wrapper {
-  position: fixed;
-  display: block;  
-  margin: auto;
-  width: 100%;
-  /* center the text wrapper vertically */
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
+	position: fixed;
+	display: block;  
+	margin: auto;
+	width: 100%;
+	/* center the text wrapper vertically */
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	  -ms-transform: translateY(-50%);
+		  transform: translateY(-50%);
 }
+
 
 .title_wrapper h1 {
 	text-align: center;
@@ -174,6 +179,7 @@ nav {
 	color: white;
 	letter-spacing: 8px;
 	font-size: 15vw;
+	line-height: normal;
 	font-weight: 400;
 	object-fit: fill;
 	align-self: center;
