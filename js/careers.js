@@ -365,4 +365,5 @@ function refreshJobDetails() {
 	}
 
 	jdBlurb.innerHTML = IconicBlurb;
+	jd.scrollTop = 0;
 }
