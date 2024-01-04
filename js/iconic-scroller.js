@@ -1,17 +1,42 @@
 let touch = false;
-
-let hoverScroller = null;
+let mouseX = 0;
+let mouseY = 0;
 
 document.addEventListener('mousemove', e => {
-	hoverScroller = document.elementFromPoint(e.clientX, e.clientY);
-	while(hoverScroller != null) {
-		if(hoverScroller.classList.contains("iconic_scroller")) {
+	mouseX = e.clientX;
+	mouseY = e.clientY;
+}, {passive: true});
+
+function getParentScroller(element) {
+	while(element != null) {
+		if(element.classList.contains("iconic_scroller")) {
 			break;
 		}
-		hoverScroller = hoverScroller.parentElement;
+		element = element.parentElement;
 	}
-	
-}, {passive: true})
+	return element;
+}
+
+function applyWheelScroll(scroller, delta) {
+	if(scroller != null) {
+		if(scroller.classList.contains("iconic_horizontal")) {
+			if (delta > 0) {
+				if(scroller.scrollLeft >= scroller.scrollWidth - scroller.clientWidth) {
+					applyWheelScroll(getParentScroller(scroller.parentElement), delta);
+				}
+				scroller.scrollLeft += 100;
+			}
+			else {
+				if(scroller.scrollLeft <= 0) {
+					applyWheelScroll(getParentScroller(scroller.parentElement), delta);
+				}
+				scroller.scrollLeft -= 100;			
+			}
+		} else {
+			scroller.scrollTop += delta;
+		}	
+	}
+}
 
 window.addEventListener("wheel", e => {
 	if(e.deltaX != 0 || touch == true) {
@@ -22,14 +47,10 @@ window.addEventListener("wheel", e => {
 	e.preventDefault();
 	e.stopImmediatePropagation();
 	
-	if(hoverScroller != null) {
-		if(hoverScroller.classList.contains("iconic_horizontal")) {
-			if (e.deltaY > 0) hoverScroller.scrollLeft += 100;
-			else hoverScroller.scrollLeft -= 100;			
-		} else {
-			hoverScroller.scrollTop += e.deltaY;
-		}	
-	}
+	let hoverElement = document.elementFromPoint(mouseX, mouseY);
+	let hoverScroller = getParentScroller(hoverElement);
+	
+	applyWheelScroll(hoverScroller, e.deltaY);
 }, {passive: false});
 
 function showCulture() {
