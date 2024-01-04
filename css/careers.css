@@ -331,7 +331,7 @@ ul li {
 		mask-image: linear-gradient(to left, transparent 0%, black 1%, black 99%, transparent 100%);
 	}
 	
-	.careers_main .job_list {
+	.careers_page .job_list {
 		flex-direction: column;
 	}
 	
