@@ -225,6 +225,7 @@ ul li {
 
 .job_card h1 {
 	margin: 0;
+	line-height: normal;
 }
 
 .job_image {
