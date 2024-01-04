@@ -17,6 +17,41 @@ html, body, main {
 	margin: 0;
 }
 
+.icn_page {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	background-color: rgba(30,30,30,0.71);
+}
+
+.icn_page_header {
+	display: flex;
+	flex-direction: column;
+	flex-grow: 0;
+	flex-shrink: 0;
+	width: 100%; 
+	object-fit: cover;
+	object-position: center;
+}
+
+.icn_page_main {
+	height: 1px;
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+	flex-shrink: 1;
+	padding: 1vh 1vw;
+	margin: 1vh 1vw;
+	overflow: hidden;
+}
+
+.icn_page_footer {
+	display: flex;
+	flex-shrink: 0;
+	flex-grow: 0;
+}
+
+
 h1 {
 	font-size: 3rem;
 	line-height: 1.75rem;

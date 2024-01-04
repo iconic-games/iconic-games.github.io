@@ -264,7 +264,7 @@ document.addEventListener('DOMContentLoaded', function (e) {
 			newRole.className = "job_card";
 			
 			if(document.getElementById("jd") == null) {
-				newRole.onclick = () => {window.location.href = "jobdetails.html?id="+i};	
+				newRole.onclick = () => {document.location.href = "jobdetails.html?id="+i};	
 			} else {
 				newRole.onclick = () => {
 					roleId = i;
