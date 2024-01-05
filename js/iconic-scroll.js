@@ -32,3 +32,7 @@ function transformStickySection(section) {
 	horizontalScroll *= scrollWidth;
 	scrollSection.style.transform = `translate3d(${-(horizontalScroll)}px, 0, 0)`;
 }
+
+function navigateTo(page) {
+	console.log(window.location.pathname + 'top.html&'+page);
+}
