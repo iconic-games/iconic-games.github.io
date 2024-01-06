@@ -252,24 +252,12 @@ section p {
 		background-size: auto 100vh;
 	}
 	
-	.team_profile {
-		width: auto;
-		height: 90%;
-		max-height: 95vh;
+	.sq_row {
 		flex-direction: column;
 	}
 	
-	.team_profile_image {
-		height: 400px;
-		width: 400px;
-		min-height: 100px;
-		min-width: 100px;
-		margin-left: 10px;
+	.sq_card {
+		max-width: 90vw;
+		max-height: 20vh;
 	}
-
-	.team_profile_text {
-		width: 400px;
-		min-width: 100px;
-		margin-top: 10px;
-	}	
 }
