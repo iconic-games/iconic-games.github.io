@@ -189,13 +189,13 @@ ul li {
 }
 
 .job_list {
-	margin: 1rem;
+	margin: 0 1rem;
 	display: flex;
 	flex-direction: row;
 	width: 95%;
 	overflow-x: scroll;
 	overflow-y: hidden;
-	-webkit-mask-image: linear-gradient(to left, transparent 0%, #1F1F1F 5%, #1F1F1F 95%, transparent 100%);
+	-webkit-mask-image: linear-gradient(to left, transparent 0%, #1F1F1F 1%, #1F1F1F 99%, transparent 100%);
 	mask-image: linear-gradient(to left, transparent 0%, black 1%, black 99%, transparent 100%);
 	align-content: center;
 	align-items: center;
@@ -329,8 +329,8 @@ ul li {
 		width: 95%;
 		overflow-x: hidden;
 		overflow-y: scroll;
-		-webkit-mask-image: linear-gradient(to left, transparent 0%, #1F1F1F 5%, #1F1F1F 95%, transparent 100%);
-		mask-image: linear-gradient(to left, transparent 0%, black 1%, black 99%, transparent 100%);
+		-webkit-mask-image: linear-gradient(to bottom, transparent 0%, #1F1F1F 4%, #1F1F1F 96%, transparent 100%);
+		mask-image: linear-gradient(to bottom, transparent 0%, black 4%, black 96%, transparent 100%);
 	}
 	
 	.careers_page .job_list {
