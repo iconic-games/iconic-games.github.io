@@ -196,6 +196,13 @@ section p {
 	max-height: 45vh;
 }
 
+.sq_link {
+	display: flex; 
+	flex-grow: 1; 
+	flex-shrink: 1;
+	text-decoration: none;
+}
+
 .sq_card {
 	display: flex; 
 	flex-grow: 1; 
