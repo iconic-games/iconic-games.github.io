@@ -218,6 +218,7 @@ ul li {
 	color: lightgray;
 	border-radius: 1vw;
 	overflow: hidden;
+	cursor: pointer;
 }
 
 .job_card:hover {
