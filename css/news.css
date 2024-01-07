@@ -25,6 +25,10 @@ body, html, main {
 	margin: 1rem;
 }
 
+.news_scroller > :nth-child(2n) {
+	flex-direction: row-reverse;
+}
+
 .news_text {
 	display: flex;
 	flex-direction: column;
@@ -37,6 +41,10 @@ body, html, main {
 	flex-grow: 1;
 	flex-shrink: 1;
 	margin: 1rem;
+	max-width: 20vw;
+	min-width: 20vw;
+	max-height: 20vw;
+	min-height: 20vw;
 }
 
 .news_card h1 {
@@ -71,5 +79,20 @@ body, html, main {
 @media screen and (orientation:portrait) {
 	.news_card {
 		flex-direction: column;
+		margin: 0.5rem 0;
+		padding: 0;
+	}
+	
+	.news_scroller > :nth-child(2n) {
+		flex-direction: column;
+	}
+	
+	.news_card img {
+		margin: 1rem 0 0.5rem 0;
+		max-width: 80vw;
+		min-width: 80vw;
+		max-height: 80vw;
+		min-height: 80vw;
+		align-self: center;
 	}
 }
