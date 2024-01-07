@@ -1,0 +1,72 @@
+body, html, main { 
+	display: flex;
+	flex-direction: column;
+	width: 100vw;
+	min-width: 100vw;
+	max-width: 100vw;
+	height: 100vh;
+	min-height: 100vh; 
+	max-height: 100vh;
+	width: 100dvw;
+	min-width: 100dvw;
+	max-width: 100dvw;
+	height: 100dvh;
+	min-height: 100dvh; 
+	max-height: 100dvh;
+	overflow: hidden;
+	color: white;
+}
+
+.news_card {
+	display: flex;
+	flex-direction: row;
+	background: hsla(0,0%,0%,0.84);
+	padding: 1rem;
+	margin: 1rem;
+}
+
+.news_text {
+	display: flex;
+	flex-direction: column;
+	background: hsla(0,0%,0%,0.84);
+	padding: 1rem;
+}
+
+.news_card img {
+	display: flex;
+	flex-grow: 1;
+	flex-shrink: 1;
+	margin: 1rem;
+}
+
+.news_card h1 {
+	margin 0;
+	padding: 0;
+	margin-block-end: 0;
+	margin-block-start: 0.5rem;
+}
+
+.news_card h2 {
+	margin 0;
+	margin-block-end: 0;
+	margin-block-start: 0.5rem;
+}
+
+.news_card h3 {
+	margin 0;
+	margin-block-end: 0;
+	margin-block-start: 0.25rem;
+	color: darkgray;
+}
+
+@media only screen and (max-width: 1000px) {	
+	main h1 {
+		font-size: 40px;
+	}
+}
+
+@media only screen and (min-height: 1000px) {
+}
+
+@media screen and (orientation:portrait) {
+}
