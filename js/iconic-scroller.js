@@ -19,18 +19,26 @@ function getParentScroller(element) {
 
 function applyWheelScroll(scroller, delta) {
 	if(scroller != null) {
-		if(scroller.classList.contains("iconic_horizontal")) {
+		// Check if scroller is fully on screen
+		const scrollerRect = scroller.getBoundingClientRect();
+		const onScreen = scrollerRect.bottom <= (window.innerHeight || document.documentElement.clientHeight) && scrollerRect.top > 0;
+		
+		if(!onScreen) {
+			applyWheelScroll(getParentScroller(scroller.parentElement), delta);
+		} else if(scroller.classList.contains("iconic_horizontal")) {
 			if (delta > 0) {
 				if(scroller.scrollLeft >= scroller.scrollWidth - scroller.clientWidth) {
 					applyWheelScroll(getParentScroller(scroller.parentElement), delta);
+				} else {
+					scroller.scrollLeft += 100;
 				}
-				scroller.scrollLeft += 100;
 			}
 			else {
 				if(scroller.scrollLeft <= 0) {
 					applyWheelScroll(getParentScroller(scroller.parentElement), delta);
+				} else {
+					scroller.scrollLeft -= 100;	
 				}
-				scroller.scrollLeft -= 100;			
 			}
 		} else {
 			scroller.scrollTop += delta;
