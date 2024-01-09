@@ -96,7 +96,7 @@ const roles = [
 		image: 'images/job-5.png',
 		imageWide: 'images/job-5ws.png',
 		synopsis: 'Because things that don’t move are boring!',
-		bg: 'url(images/studio2.png)',
+		bg: 'url(images/steampunk.png)',
 		duties: [
 			'Collaborate closely with the Creative Director, Art Director and wider team to define the animation style of our game.',
 			'Set a clear animation vision as well as quality targets, leading with hands-on craft and providing feedback and notes as needed.',
@@ -125,7 +125,7 @@ const roles = [
 		imageWide: 'images/job-2ws.png',
 		synopsis: 'Techno techno techno techno...',
 		overview: 'As the Principal Technical Artist you will be responsible for analyzing game content and levels from a performance standpoint and setting budgets, standards, and best practices for cutting edge real-time projects resulting in the highest quality content running at target framerates on target hardware.\nEveryone who joins Iconic becomes an owner of the studio with a meaningful percentage of company stock, giving you real skin in the game!',
-		bg: 'url(images/studio2.png)',
+		bg: 'url(images/steampunk.png)',
 		duties: [
 			'Drive improvements and maintain the toolchain for art asset creation and optimization that meet the team’s needs.',
 			'Innovate techniques in asset creation that get the best visual results from the target platform.',
@@ -154,7 +154,7 @@ const roles = [
 		image: 'images/job-2.png',
 		imageWide: 'images/job-2w.png',
 		synopsis: 'Designing games. Dream job innit.',
-		bg: 'url(images/steampunk.png)',
+		bg: 'url(images/starship.png)',
 		overview: 'We’re looking for an Open World Designer to join our team in London. You will need boundless creativity to fill our game worlds with believable and exciting content, creating unforgettable gaming experiences for our players. You will be responsible for designing and implementing open-world environments that align with the game’s creative vision and technical requirements.',
 		duties: [
 			'Maintaining the highest possible quality of open world content and fixing reported bugs.',
@@ -184,7 +184,7 @@ const roles = [
 		image: 'images/job-2.png',
 		imageWide: 'images/job-2w.png',
 		synopsis: 'Programmer, coder, engineer, whatever.',
-		bg: 'url(images/steampunk.png)',
+		bg: 'url(images/starship.png)',
 		overview: 'As one of the first engineers in a small but growing team you’ll have the opportunity to work across the game as we build the first proof of concept. You’ll be able to contribute not just technically but creatively too in a studio that doesn’t just talk about collaboration in job interviews. We value proactivity and as a senior engineer you’ll design and take game systems from concept to release as well as helping to shape engineering and company culture.',
 		duties: [
 			'Working mainly in C++ to deliver game systems.',
