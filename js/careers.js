@@ -155,11 +155,28 @@ const roles = [
 		imageWide: 'images/job-2w.png',
 		synopsis: 'Designing games. Dream job innit.',
 		bg: 'url(images/steampunk.png)',
+		overview: 'We’re looking for an Open World Designer to join our team in London. You will need boundless creativity to fill our game worlds with believable and exciting content, creating unforgettable gaming experiences for our players. You will be responsible for designing and implementing open-world environments that align with the game’s creative vision and technical requirements.',
 		duties: [
+			'Maintaining the highest possible quality of open world content and fixing reported bugs.',
+			'Champion a cohesive design vision that upholds the game’s pillars.',
+			'Develop and oversee the rules and metrics for gameplay spaces.',
+			'Cooperate with other departments.',
+			'Create and maintaining documentation.',
+			'Use Unreal Engine 5 to design, whitebox, validate, iterate, and polish game worlds that deliver valuable experiences to players.',
+			'Regularly play the game and provide constructive feedback to other members of the team.',
 		],
 		required: [
+			'Shipped at least two prominent titles.',
+			'Well developed communication skills.',
+			'Boundless creativity and strong visual aesthetic.',
+			'Strong critical and analytical thinking.',
+			'Strong knowledge of game design, design theory, existing game mechanics, and how they interact with level design.',
+			'Ability to learn new tools and workflows.',
+			'A passion for games and for making games. With a wealth of knowledge across a wide range of games.'
 		],
 		bonus: [
+			'Experience working on open world games.',
+			'Shipped a title using Unreal Blueprints.',
 		]
 	},
 	{
