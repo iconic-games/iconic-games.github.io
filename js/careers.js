@@ -41,7 +41,7 @@ const roles = [
 		imageWide: 'images/job-3ws.png',
 		synopsis: 'Like characters? Like art? This could be your perfect role!',
 		overview: 'We are looking for someone who can help us define the next generation of game characters. You will collaboration with the Art Director and wider team to define, develop and maintain character assets. As one of the first artists joining a new game studio you will help to develop pipelines and processes, define the artistic style and company culture.\nEveryone who joins Iconic becomes an owner of the studio with a meaningful percentage of company stock, giving you real skin in the game!',
-		bg: 'url(images/studio2.png)',
+		bg: 'url(images/workshop.png)',
 		duties: [
 			'Create beautiful character art from concept art, 3D scan data and reference materials',
 			'With the Art Director, help define and set the artistic style and vision for the game.',
@@ -125,7 +125,7 @@ const roles = [
 		imageWide: 'images/job-2ws.png',
 		synopsis: 'Techno techno techno techno...',
 		overview: 'As the Principal Technical Artist you will be responsible for analyzing game content and levels from a performance standpoint and setting budgets, standards, and best practices for cutting edge real-time projects resulting in the highest quality content running at target framerates on target hardware.\nEveryone who joins Iconic becomes an owner of the studio with a meaningful percentage of company stock, giving you real skin in the game!',
-		bg: 'url(images/steampunk.png)',
+		bg: 'url(images/starship.png)',
 		duties: [
 			'Drive improvements and maintain the toolchain for art asset creation and optimization that meet the team’s needs.',
 			'Innovate techniques in asset creation that get the best visual results from the target platform.',
@@ -154,7 +154,7 @@ const roles = [
 		image: 'images/job-6.png',
 		imageWide: 'images/job-6ws.png',
 		synopsis: 'Designing games. Dream job innit.',
-		bg: 'url(images/starship.png)',
+		bg: 'url(images/steampunk.png)',
 		overview: 'We’re looking for an Open World Designer to join our team in London. You will need boundless creativity to fill our game worlds with believable and exciting content, creating unforgettable gaming experiences for our players. You will be responsible for designing and implementing open-world environments that align with the game’s creative vision and technical requirements.',
 		duties: [
 			'Maintaining the highest possible quality of open world content and fixing reported bugs.',
