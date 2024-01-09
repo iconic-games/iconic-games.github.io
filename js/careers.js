@@ -151,8 +151,8 @@ const roles = [
 	},
 	{
 		name: 'Game Designer',
-		image: 'images/job-2.png',
-		imageWide: 'images/job-2w.png',
+		image: 'images/job-6.png',
+		imageWide: 'images/job-6ws.png',
 		synopsis: 'Designing games. Dream job innit.',
 		bg: 'url(images/starship.png)',
 		overview: 'We’re looking for an Open World Designer to join our team in London. You will need boundless creativity to fill our game worlds with believable and exciting content, creating unforgettable gaming experiences for our players. You will be responsible for designing and implementing open-world environments that align with the game’s creative vision and technical requirements.',
@@ -181,8 +181,8 @@ const roles = [
 	},
 	{
 		name: 'Senior Game Engineer',
-		image: 'images/job-2.png',
-		imageWide: 'images/job-2w.png',
+		image: 'images/job-7.png',
+		imageWide: 'images/job-7ws.png',
 		synopsis: 'Programmer, coder, engineer, whatever.',
 		bg: 'url(images/starship.png)',
 		overview: 'As one of the first engineers in a small but growing team you’ll have the opportunity to work across the game as we build the first proof of concept. You’ll be able to contribute not just technically but creatively too in a studio that doesn’t just talk about collaboration in job interviews. We value proactivity and as a senior engineer you’ll design and take game systems from concept to release as well as helping to shape engineering and company culture.',
