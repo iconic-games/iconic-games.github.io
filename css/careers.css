@@ -111,6 +111,7 @@ rootElement {
 	height: 100%;
 	min-width: 25%;
 	max-width: 25%;
+	background: hsla(0,0%,0%,0.80);
 }
 
 .jobpage_listcontainer {
@@ -129,10 +130,10 @@ rootElement {
 	height: 100%; 
 	overflow-y: scroll;
 	flex-grow: 1;
-	font-size: 1vw;
+	font-size: clamp(1rem, 1.5vw, 2rem);
 	padding: 0 1rem;
 	color: lightgrey;
-	background: hsla(0,0%,0%,0.47);
+	background: hsla(0,0%,0%,0.80);
 }
 
 #jdImage {
@@ -161,6 +162,11 @@ rootElement {
 	margin: 0.25rem;
 	padding: 0;
 	color: darkgoldenrod;
+}
+
+.jobpage_jd p {
+	font-size: clamp(1rem, 1.5vw, 2rem);
+	padding: 0 2rem;
 }
 
 ul li {
@@ -416,6 +422,10 @@ ul li {
 		font-size: 4vh;
 	}
 
+	.jobpage_jd p {
+		font-size: clamp(1rem, 1.75vh, 4rem);
+	}
+	
 	.jobpage_jd li {
 	}
 	
@@ -472,6 +482,7 @@ ul li {
 	
 	.job_summary p {
 		display: none;
+		font-size: clamp(1rem, 1.75vh, 4rem);
 	}
 	
 	.culture_card {
