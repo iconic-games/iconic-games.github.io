@@ -49,6 +49,7 @@ html, body, main {
 	display: flex;
 	flex-shrink: 0;
 	flex-grow: 0;
+	background-color: rgba(0,0,0,0.1);
 }
 
 
