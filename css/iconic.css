@@ -190,32 +190,20 @@ ul li a i {
 	padding: 10px 0;
 }
 
-.facebook:hover {
+.fa-facebook:hover {
   color: #3b5998;
 }
-.facebook:hover span { 
-  background: #3b5998;
-}
 
-.twitter:hover {
+.fa-twitter:hover {
   color: #1da1f2;
 }
-.twitter:hover span { 
-  background: #1da1f2;
-}
 
-.instagram:hover {
+.fa-instagram:hover {
   color: #c32aa3;
 }
-.instagram:hover span { 
-  background: #c32aa3;
-}
 
-.linkedin:hover {
+.fa-linkedin:hover {
   color: hsla(214,75%,43%,1.00);
-}
-.linkedin:hover span { 
-  background: hsla(214,75%,43%,1.00);
 }
 
 .horizontal_scroller {
