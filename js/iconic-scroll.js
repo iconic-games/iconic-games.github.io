@@ -6,9 +6,10 @@ window.addEventListener('scroll', (e) => {
 	}
 	
 	if(window.scrollY > window.innerHeight) {
-		mainNav.hidden = false;
+		console.log("1");
+		mainNav.style.opacity = 1;
 	} else {
-		mainNav.hidden = true;
+		mainNav.style.opacity = 0;
 	}
 });
 
