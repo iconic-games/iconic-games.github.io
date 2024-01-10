@@ -103,13 +103,14 @@ rootElement {
 
 .team_profile_games {
 	display: flex;
-	justify-content: space-around;
+	justify-content: flex-start;
 }
 
 .team_profile_game_image {
-	max-height: 25vh;
-	width: 20%;
+	max-height: 300px;
+	max-width: 20%;
 	padding-top: 1vh;
+	padding-left: 1rem;
 }
 
 
