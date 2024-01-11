@@ -249,12 +249,12 @@ function fitText(el) {
 	var fsize = parseFloat(window.getComputedStyle(el, null).getPropertyValue('font-size'));
 	var fam = window.getComputedStyle(el, null).getPropertyValue('font-family');
 	var weight = window.getComputedStyle(el, null).getPropertyValue('font-weight');
-	var available = el.getBoundingClientRect().width * 0.9; // Margin
+	var available = el.getBoundingClientRect().width * 0.95;
 	var oneRem = parseInt(getComputedStyle(document.documentElement).fontSize);
 	var maxFont = el.tagName.toLowerCase() == 'h1' ? oneRem * 4 : oneRem * 2;
 	
 	var measured = measureText(text, fsize, fam, weight);
-	while(measured.width > available && fsize > oneRem) {
+	while(measured.width > available && fsize > oneRem * 0.75) {
 		fsize -= 0.25;
 		measured = measureText(text, fsize, fam, weight);
 	}
@@ -262,6 +262,9 @@ function fitText(el) {
 	while(measured.width < available && fsize < maxFont){
 		fsize += 0.25;
 		measured = measureText(text, fsize, fam, weight);
+		if(measured.width > available) {
+			fsize -= 0.25;
+		}
 	}
 	
 	el.style.fontSize = fsize + 'px';
@@ -324,7 +327,9 @@ document.addEventListener('DOMContentLoaded', function (e) {
 		entries.forEach(entry => {
 			let fontSize = fitText(entry.target);
 			if(entry.target.tagName.toUpperCase() == 'P') {
-				minFontSizeP = fontSize;
+				if(fontSize < minFontSizeP) {
+					minFontSizeP = fontSize;
+				}
 			} else if(fontSize < minFontSizeH1) {
 				minFontSizeH1 = fontSize;
 			}

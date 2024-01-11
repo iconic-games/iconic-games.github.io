@@ -530,3 +530,9 @@ ul li {
 		margin: 0.5rem;
 	}
 }
+
+.fitText {
+	margin-inline-end: 0px;
+	margin-inline-start: 0px;
+	margin: 0.25rem !important;
+}
