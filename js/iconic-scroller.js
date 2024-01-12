@@ -21,7 +21,9 @@ function applyWheelScroll(scroller, delta) {
 	if(scroller != null) {
 		// Check if scroller is fully on screen
 		const scrollerRect = scroller.getBoundingClientRect();
-		const onScreen = scrollerRect.bottom <= (window.innerHeight || document.documentElement.clientHeight) && scrollerRect.top > 0;
+		const oneRem = parseInt(getComputedStyle(document.documentElement).fontSize);
+		const horizontal = scroller.classList.contains("iconic_horizontal");
+		const onScreen = !horizontal || ((scrollerRect.bottom + oneRem) <= (window.innerHeight || document.documentElement.clientHeight) && scrollerRect.top > 0);
 		
 		if(!onScreen) {
 			applyWheelScroll(getParentScroller(scroller.parentElement), delta);
