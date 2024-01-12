@@ -45,7 +45,7 @@ rootElement {
 	width: auto;
 	object-fit: cover;
 	object-position: center;
-	padding: 10px 30px;
+	padding: 0px 30px 30px 30px;
 }
 
 .team_profile_image {
