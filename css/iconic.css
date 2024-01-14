@@ -259,6 +259,14 @@ ul li a i {
 		right: 0px;
 	}
 	
+	.scroller_chevron {
+		opacity: 0;
+	}
+
+	.hscroller_container:hover .scroller_chevron {
+		opacity: 0;
+	}
+	
 	.copyright {
 		visibility: hidden;
 	}
