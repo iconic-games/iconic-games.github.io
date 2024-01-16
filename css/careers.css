@@ -241,6 +241,7 @@ ul li {
     border-radius: 1.8rem;
     background-size: 200% 100%;
     transition: background-position 0.8s ease-out;
+	scroll-snap-align: start;
 	
 	&:hover {
       background-position: 100% 0;
@@ -301,6 +302,7 @@ ul li {
 	flex-direction: row-reverse;
 	margin: 0 0.5rem;
 	background: hsla(0,0%,0%,0.84);
+	scroll-snap-align: start;
 }
 
 .culture_image {

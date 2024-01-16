@@ -17,8 +17,11 @@ function getParentScroller(element) {
 	return element;
 }
 
+let lastWheelTime = 0;
 function applyWheelScroll(scroller, delta) {
+	console.log("1 " + scroller);
 	if(scroller != null) {
+		console.log("2");
 		// Check if scroller is fully on screen
 		const scrollerRect = scroller.getBoundingClientRect();
 		const oneRem = parseInt(getComputedStyle(document.documentElement).fontSize);
@@ -26,20 +29,40 @@ function applyWheelScroll(scroller, delta) {
 		const onScreen = !horizontal || ((scrollerRect.bottom + oneRem) <= (window.innerHeight || document.documentElement.clientHeight) && scrollerRect.top > 0);
 		
 		if(!onScreen) {
+			console.log("3");
 			applyWheelScroll(getParentScroller(scroller.parentElement), delta);
 		} else if(scroller.classList.contains("iconic_horizontal")) {
+			console.log("4");
 			if (delta > 0) {
 				if(scroller.scrollLeft >= scroller.scrollWidth - scroller.clientWidth) {
 					applyWheelScroll(getParentScroller(scroller.parentElement), delta);
 				} else {
-					scroller.scrollLeft += 100;
+					const d = new Date();
+					const now = d.getTime();
+					if(now < lastWheelTime + 250) {
+						return;
+					}
+					lastWheelTime = d.getTime();
+					scroller.scrollBy({
+						left: 200,
+						behavior: "smooth",
+					});
 				}
 			}
 			else {
 				if(scroller.scrollLeft <= 0) {
 					applyWheelScroll(getParentScroller(scroller.parentElement), delta);
 				} else {
-					scroller.scrollLeft -= 100;	
+					const d = new Date();
+					const now = d.getTime();
+					if(now < lastWheelTime + 250) {
+						return;
+					}
+					lastWheelTime = d.getTime();
+					scroller.scrollBy({
+						left: -200,
+						behavior: "smooth",
+					});
 				}
 			}
 		} else {

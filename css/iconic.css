@@ -213,6 +213,7 @@ ul li a i {
 	flex-direction: row;
 	overflow-x: scroll;
 	overflow-y: hidden;
+	scroll-snap-type: x proximity;
 }
 
 .vertical_scroller {

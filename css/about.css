@@ -46,6 +46,7 @@ rootElement {
 	object-fit: cover;
 	object-position: center;
 	padding: 0px 30px 30px 10px;
+	scroll-snap-align: start;
 }
 
 .team_profile_image {

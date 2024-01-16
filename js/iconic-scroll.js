@@ -6,7 +6,6 @@ window.addEventListener('scroll', (e) => {
 	}
 	
 	if(window.scrollY > window.innerHeight) {
-		console.log("1");
 		mainNav.style.opacity = 1;
 	} else {
 		mainNav.style.opacity = 0;
