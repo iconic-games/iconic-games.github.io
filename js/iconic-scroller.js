@@ -71,3 +71,11 @@ function showJobs() {
 	document.getElementById("culture").hidden = true;
 	document.getElementById("jobs").hidden = false;
 }
+
+function scroller(id, delta) {
+	const scroller = document.getElementById(id);
+	scroller.scrollBy({
+		left: delta,
+		behavior: "smooth",
+	});
+}
