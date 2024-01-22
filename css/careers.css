@@ -198,6 +198,7 @@ ul li {
 	display: flex;
 	height: 100%;
 	width: 100%;
+	justify-content: center;
 }
 
 .job_list {
@@ -292,6 +293,12 @@ ul li {
 	margin: 0.25rem 3rem;
 }
 
+#culture-list {
+	align-items: center;
+	text-align: center;
+	justify-content: space-between;
+}
+
 .culture_card {
 	width: auto;
 	height: 80%;
@@ -301,16 +308,11 @@ ul li {
 	display: flex;
 	flex-direction: row-reverse;
 	margin: 0 0.5rem;
-	background: hsla(0,0%,0%,0.84);
+	background-size: cover;
+	background-color: hsla(0,0%,0%,0.84);
+	background-blend-mode: darken;
 	scroll-snap-align: start;
-}
-
-.culture_image {
-	width: 16.5vw;
-	max-width: 400px;
-	height: 100%;
-	object-fit: cover;
-	object-position: center;
+	padding: 1rem;
 }
 
 .culture_text {
@@ -322,20 +324,63 @@ ul li {
 }
 
 .culture_text h2 {
-	font-size: 3rem;
+	font-size: 2.5vw;
 	font-weight: 200;
 	line-height: 2.5rem;
-	color: darkgoldenrod;
+	color: goldenrod;
 }
 
 .culture_text h3 {
-	font-size: 1.5rem;
+	font-size: 2vw;
 	font-weight: 150;
 	line-height: 1.5rem;
 }
 
 .culture_text p {
-	font-size: 1.25rem;
+	font-size: 1.4rem;
+}
+
+@media only screen and (max-width: 1600px) {
+	#culture-list {
+		flex-direction: column;
+		flex-grow: 0;
+		flex-shrink: 0;
+		height: auto;
+		width: 100%;
+		max-height: none;
+		max-width: none;
+		min-width: none;
+		min-height: none;
+		overflow-x: hidden;
+		overflow-y: scroll;
+	}
+	
+	.culture_card {
+		display: flex;
+		flex-direction: column;
+		flex-grow: 1;
+		position: relative;
+		width: 100%;
+		min-width: 100%;
+		max-width: 100%;
+		height: auto;
+		min-height: none;
+		max-height: none;
+		margin: 0.5rem 0;
+		justify-content: center;
+	}
+
+	.culture_text {
+		display: flex;
+		flex-direction: column;
+		flex-grow: 1;
+		width: 950%;
+		min-width: 95%;
+		max-width: 95%;
+		object-fit: cover;
+		object-position: center;
+		margin: 0.5rem;
+	}
 }
 
 @media screen and (orientation:portrait) {
@@ -379,17 +424,6 @@ ul li {
 	}
 
 	.jobpage_list {
-		flex-grow: 0;
-		flex-shrink: 0;
-		height: auto;
-		width: 100%;
-		max-height: none;
-		max-width: none;
-		min-width: none;
-		min-height: none;
-	}
-	
-	.culture_list {
 		flex-grow: 0;
 		flex-shrink: 0;
 		height: auto;
@@ -495,41 +529,6 @@ ul li {
 	.job_summary p {
 		display: none;
 		font-size: clamp(1rem, 1.75vh, 4rem);
-	}
-	
-	.culture_card {
-		display: flex;
-		flex-direction: column;
-		flex-grow: 1;
-		position: relative;
-		width: 100%;
-		min-width: 100%;
-		max-width: 100%;
-		height: auto;
-		min-height: none;
-		max-height: none;
-		margin: 0.5rem 0;
-		justify-content: center;
-	}
-	
-	.culture_image {
-		width: 100%;
-		max-width: 100%;
-		height: auto;
-		object-fit: cover;
-		object-position: center;
-	}
-
-	.culture_text {
-		display: flex;
-		flex-direction: column;
-		flex-grow: 1;
-		width: 950%;
-		min-width: 95%;
-		max-width: 95%;
-		object-fit: cover;
-		object-position: center;
-		margin: 0.5rem;
 	}
 }
 

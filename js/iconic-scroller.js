@@ -25,13 +25,15 @@ function applyWheelScroll(scroller, delta) {
 		// Check if scroller is fully on screen
 		const scrollerRect = scroller.getBoundingClientRect();
 		const oneRem = parseInt(getComputedStyle(document.documentElement).fontSize);
-		const horizontal = scroller.classList.contains("iconic_horizontal");
+		const scrollerStyle = window.getComputedStyle(scroller);
+		const horizontal = scrollerStyle.flexDirection == "row" || scrollerStyle.flexDirection == "row-reverse";
 		const onScreen = !horizontal || ((scrollerRect.bottom + oneRem) <= (window.innerHeight || document.documentElement.clientHeight) && scrollerRect.top > 0);
 		
+		console.log("2.5 - " + scrollerStyle.flexDirection);
 		if(!onScreen) {
 			console.log("3");
 			applyWheelScroll(getParentScroller(scroller.parentElement), delta);
-		} else if(scroller.classList.contains("iconic_horizontal")) {
+		} else if(horizontal) {
 			console.log("4");
 			if (delta > 0) {
 				if(scroller.scrollLeft >= scroller.scrollWidth - scroller.clientWidth) {
