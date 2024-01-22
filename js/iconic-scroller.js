@@ -90,11 +90,15 @@ window.addEventListener("wheel", e => {
 
 function showCulture() {
 	document.getElementById("jobs").hidden = true;
+	document.getElementById("jobNavOption").style.textDecoration = "none";
 	document.getElementById("culture").hidden = false;
+	document.getElementById("cultureNavOption").style.textDecoration = "underline";
 }
 function showJobs() {
 	document.getElementById("culture").hidden = true;
+	document.getElementById("cultureNavOption").style.textDecoration = "none";
 	document.getElementById("jobs").hidden = false;
+	document.getElementById("jobNavOption").style.textDecoration = "underline";
 }
 
 function scroller(id, delta) {

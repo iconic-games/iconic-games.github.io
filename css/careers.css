@@ -245,8 +245,8 @@ ul li {
 	scroll-snap-align: start;
 	
 	&:hover {
-      background-position: 100% 0;
-	color: white;
+  		background-position: 100% 0;
+		color: white;
     }
 }
 
