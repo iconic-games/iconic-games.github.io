@@ -40,13 +40,19 @@ body, html, main {
 	max-width: 20vw;
 }
 
+.news_card span {
+	background-color: rgba(109,109,109,0.50);
+	padding: 0.5rem 1rem 0.5rem 1rem;
+	border-radius: 1rem;
+}
+
 .news_card h1 {
 	margin 0;
 	padding: 0;
 	margin-inline-start: 0;
 	margin-block-end: 0.5rem;
 	margin-block-start: 0.5rem;
-	color: darkgoldenrod;
+	color: gold;
 }
 
 .news_card h2 {
