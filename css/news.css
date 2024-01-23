@@ -76,3 +76,10 @@ body, html, main {
 		padding: 1rem;
 	}
 }
+
+@media screen and (orientation:portrait) {
+	.news_scroller {
+		max-width: 100%;
+		padding: 1rem;
+	}
+}
