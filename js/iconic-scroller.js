@@ -19,9 +19,7 @@ function getParentScroller(element) {
 
 let lastWheelTime = 0;
 function applyWheelScroll(scroller, delta) {
-	console.log("1 " + scroller);
 	if(scroller != null) {
-		console.log("2");
 		// Check if scroller is fully on screen
 		const scrollerRect = scroller.getBoundingClientRect();
 		const oneRem = parseInt(getComputedStyle(document.documentElement).fontSize);
@@ -29,12 +27,9 @@ function applyWheelScroll(scroller, delta) {
 		const horizontal = scrollerStyle.flexDirection == "row" || scrollerStyle.flexDirection == "row-reverse";
 		const onScreen = !horizontal || ((scrollerRect.bottom + oneRem) <= (window.innerHeight || document.documentElement.clientHeight) && scrollerRect.top > 0);
 		
-		console.log("2.5 - " + scrollerStyle.flexDirection);
 		if(!onScreen) {
-			console.log("3");
 			applyWheelScroll(getParentScroller(scroller.parentElement), delta);
 		} else if(horizontal) {
-			console.log("4");
 			if (delta > 0) {
 				if(scroller.scrollLeft >= scroller.scrollWidth - scroller.clientWidth) {
 					applyWheelScroll(getParentScroller(scroller.parentElement), delta);
