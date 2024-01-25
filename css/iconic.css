@@ -186,13 +186,13 @@ ul li a {
 }
 
 ul li a i {
-	margin: 0 1rem 0 1rem;
+	margin: 0 min(1vw, 0.75rem) 0 min(1vw, 0.75rem);
 }
 
 .fa {
 	display: flex;
 	padding: 10px 0;
-	font-size: min(2vw, 1rem);
+	font-size: max(1vw, 1rem);
 }
 
 .fa-facebook:hover {
