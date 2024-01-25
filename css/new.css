@@ -155,7 +155,7 @@ h1 {
 }
 
 .container_image .title_wrapper h1 {
-  color: rgba(0,0,0,0.96);
+  color: rgba(255,255,255,0.9);
 }
 
 section {
@@ -172,17 +172,6 @@ section {
 main h1 {
 	font-size: 120px;
 	font-weight: 300;
-}
-
-section h2 {
-  font-family: Teko, sans-serif;
-  letter-spacing: 4px;
-  font-size: 120px;
-  font-weight: 300;
-}
-
-section p {
-  font-family: Teko, sans-serif;
 }
 
 .sq_row {
@@ -223,7 +212,7 @@ section p {
 	flex-grow: 0; 
 	flex-shrink: 0; 
 	width: 100%;
-	color: darkgoldenrod;
+	color: whitesmoke;
 	align-self: center;
 	font-size: 3vw;
 	background: hsla(0,0%,0%,0.8);
