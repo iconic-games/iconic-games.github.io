@@ -133,7 +133,7 @@ rootElement {
 	font-size: clamp(1rem, 1.5vw, 2rem);
 	padding: 0 1rem;
 	color: lightgrey;
-	background: hsla(0,0%,0%,0.80);
+	background: hsla(0,0%,0%,0.90);
 }
 
 #jdImage {
@@ -191,7 +191,7 @@ ul li {
 }
 
 .jobpage_jd_block {
-	background: hsla(0,0%,0%,0.35);
+	padding: 0 1rem;
 }
 
 .job-list-parent {
