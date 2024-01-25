@@ -70,6 +70,9 @@ body, html, main {
 }
 
 .news_card p {
+	font-family: "Franklin Gothic", "Arial", "sans-serif";
+	font-size: max(1.25rem, 1.25vw);
+	line-height: normal;
 }
 
 @media only screen and (max-width: 1000px) {	
