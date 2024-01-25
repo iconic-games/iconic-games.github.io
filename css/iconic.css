@@ -177,10 +177,7 @@ ul li {
 ul li a {
 	display:block;
 	position:relative;
-	width:20vw;
-	max-width:100px;
-	height:20vw;
-	max-height: 60px;
+	height:auto;
 	font-size: min(10vw, 40px);
 	text-align:center;
 	text-decoration:none;
@@ -189,12 +186,13 @@ ul li a {
 }
 
 ul li a i {
-	position:absolute;
+	margin: 0 1rem 0 1rem;
 }
 
 .fa {
 	display: flex;
 	padding: 10px 0;
+	font-size: min(2vw, 1rem);
 }
 
 .fa-facebook:hover {
