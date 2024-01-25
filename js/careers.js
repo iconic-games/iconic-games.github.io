@@ -270,7 +270,7 @@ document.addEventListener('DOMContentLoaded', function (e) {
 function refreshJobDetails() {
 	const role = roles[roleId];
 	
-	jdImage.src = role.imageWide;
+	jdImage.style.setProperty("background-image", "url(" + role.imageWide + ")");
 	jdTitle.innerHTML = role.name;	
 	jdOverview.innerHTML = role.overview == undefined ? "" : role.overview;
 	

@@ -149,10 +149,10 @@ rootElement {
 	left: 0; 
 	width: 100%;
 	margin: 0; 
-	padding: 0; 
+	padding: 0.5rem 0 0 0; 
 	text-align: center;
-	font-size: 4vw;
-	line-height: 1em; 
+	font-size: 3.5rem;
+	line-height: 3.5rem; 
 	color: whitesmoke;
 	background-color: rgba(30,30,30,0.71);
 }
