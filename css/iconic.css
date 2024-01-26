@@ -74,7 +74,6 @@ p {
 	font-size: 1.25rem;
     border-style: none;
     outline: none;
-    // height calc line-height + (vertical-padding * 2) + (vertical-border * 2)
     height: calc(1em + 1.6em + 0.5em);
     width: 100%;
     padding: 0.25rem 1.5rem;
@@ -254,7 +253,12 @@ ul li a i {
 	align-self: flex-end;
 }
 
-@media screen and (orientation:portrait) {	
+@media screen and (orientation:portrait) {
+	p {
+		font-family: Noto Sans, sans-serif;
+		font-size: clamp(1rem, 1vh, 1.5rem);
+	}
+	
 	nav {
 		font-size: 5vw;
 	}

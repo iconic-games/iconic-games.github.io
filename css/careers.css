@@ -165,8 +165,7 @@ rootElement {
 }
 
 .jobpage_jd p {
-	font-size: clamp(1rem, 1.5vw, 2rem);
-	padding: 0 2rem;
+	padding: 0 1rem;
 	margin-block-start: 0.25rem;
 	margin-block-end: 0.25rem;
 }
@@ -177,6 +176,15 @@ ul li {
 	list-style-position: inside;
 	align-items: center;
 	margin-left: 1rem;
+	font-family: Noto Sans, sans-serif;
+	line-height: max(1.5vw, 1.5rem);
+	font-size: max(1vw, 1rem);
+}
+
+p {
+	font-family: Noto Sans, sans-serif;
+	font-size: max(1vw, 1rem);
+	line-height: normal;
 }
 
 .jobpage_jd li:before {

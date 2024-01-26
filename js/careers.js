@@ -7,6 +7,8 @@ const roles = [
 		imageWide: 'images/job-1ws.png',
 		synopsis: 'Must be a great artist, a great person manager and a great person.',
 		bg: 'url(images/studio2.png)',
+		overview: '<p>We are looking for an Art Director who can form a key part of our leadership team at Iconic. You will help the team to define the artist vision of the games we make and our strategy for adopting AI into our processes and pipelines, enhancing rather than replacing human creativity.</p>',
+
 		duties: [
 			'Set the artistic direction for our games.',
 			'Define and communicate the artistic vision for our games.',
@@ -40,7 +42,7 @@ const roles = [
 		image: 'images/job-3.png',
 		imageWide: 'images/job-3ws.png',
 		synopsis: 'Like characters? Like art? This could be your perfect role!',
-		overview: 'We are looking for someone who can help us define the next generation of game characters. You will collaboration with the Art Director and wider team to define, develop and maintain character assets. As one of the first artists joining a new game studio you will help to develop pipelines and processes, define the artistic style and company culture.\nEveryone who joins Iconic becomes an owner of the studio with a meaningful percentage of company stock, giving you real skin in the game!',
+		overview: '<p>We are looking for someone who can help us define the next generation of game characters. You will collaboration with the Art Director and wider team to define, develop and maintain character assets. As one of the first artists joining a new game studio you will help to develop pipelines and processes, define the artistic style and company culture.\nEveryone who joins Iconic becomes an owner of the studio with a meaningful percentage of company stock, giving you real skin in the game!</p>',
 		bg: 'url(images/workshop.png)',
 		duties: [
 			'Create beautiful character art from concept art, 3D scan data and reference materials',
@@ -124,7 +126,7 @@ const roles = [
 		image: 'images/job-2.png',
 		imageWide: 'images/job-2ws.png',
 		synopsis: 'Techno techno techno techno...',
-		overview: 'As the Principal Technical Artist you will be responsible for analyzing game content and levels from a performance standpoint and setting budgets, standards, and best practices for cutting edge real-time projects resulting in the highest quality content running at target framerates on target hardware.\nEveryone who joins Iconic becomes an owner of the studio with a meaningful percentage of company stock, giving you real skin in the game!',
+		overview: '<p>As the Principal Technical Artist you will be responsible for analyzing game content and levels from a performance standpoint and setting budgets, standards, and best practices for cutting edge real-time projects resulting in the highest quality content running at target framerates on target hardware.\nEveryone who joins Iconic becomes an owner of the studio with a meaningful percentage of company stock, giving you real skin in the game!</p>',
 		bg: 'url(images/starship.png)',
 		duties: [
 			'Drive improvements and maintain the toolchain for art asset creation and optimization that meet the team’s needs.',
@@ -155,7 +157,7 @@ const roles = [
 		imageWide: 'images/job-6ws.png',
 		synopsis: 'Designing games. Dream job innit.',
 		bg: 'url(images/steampunk.png)',
-		overview: 'We’re looking for an Open World Designer to join our team in London. You will need boundless creativity to fill our game worlds with believable and exciting content, creating unforgettable gaming experiences for our players. You will be responsible for designing and implementing open-world environments that align with the game’s creative vision and technical requirements.',
+		overview: '<p>We’re looking for an Open World Designer to join our team in London. You will need boundless creativity to fill our game worlds with believable and exciting content, creating unforgettable gaming experiences for our players. You will be responsible for designing and implementing open-world environments that align with the game’s creative vision and technical requirements.</p>',
 		duties: [
 			'Maintaining the highest possible quality of open world content and fixing reported bugs.',
 			'Champion a cohesive design vision that upholds the game’s pillars.',
@@ -185,7 +187,7 @@ const roles = [
 		imageWide: 'images/job-7ws.png',
 		synopsis: 'Programmer, coder, engineer, whatever.',
 		bg: 'url(images/starship.png)',
-		overview: 'As one of the first engineers in a small but growing team you’ll have the opportunity to work across the game as we build the first proof of concept. You’ll be able to contribute not just technically but creatively too in a studio that doesn’t just talk about collaboration in job interviews. We value proactivity and as a senior engineer you’ll design and take game systems from concept to release as well as helping to shape engineering and company culture.',
+		overview: '<p>As one of the first engineers in a small but growing team you’ll have the opportunity to work across the game as we build the first proof of concept. You’ll be able to contribute not just technically but creatively too in a studio that doesn’t just talk about collaboration in job interviews. We value proactivity and as a senior engineer you’ll design and take game systems from concept to release as well as helping to shape engineering and company culture.</p>',
 		duties: [
 			'Working mainly in C++ to deliver game systems.',
 			'Champion a strong and practical software engineering approach.',
