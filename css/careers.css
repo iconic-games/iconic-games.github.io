@@ -109,8 +109,8 @@ rootElement {
 	display: flex;
 	flex-direction: column;
 	height: 100%;
-	min-width: 25%;
-	max-width: 25%;
+	min-width: min(25%, 450px);
+	max-width: min(25%, 450px);
 	background: hsla(0,0%,0%,0.80);
 }
 
@@ -226,11 +226,11 @@ p {
 	display: flex;
 	position: relative;
 	width: 22.5vw;
-	min-width: 22.5vw;
-	max-width: min(22.5vw, 800px);
+	min-width: min(22.5vw, 400px);
+	max-width: min(22.5vw, 400px);
 	height: 22.5vw;
-	min-height: 22.5vw;
-	max-height: min(22.5vw, 800px);
+	min-height: min(22.5vw, 400px);
+	max-height: min(22.5vw, 400px);
 	object-fit: cover;
 	object-position: center;
 	flex-direction: row;
