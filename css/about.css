@@ -32,6 +32,36 @@ rootElement {
 	color: white;
 }
 
+.division {
+	display: flex;
+	min-height:100vh;
+}
+
+.division p {
+	padding: 0 10vw 0 10vw; 
+	text-align: center; 
+	justify-content: center; 
+	align-self: center;
+	font-size: max(1.5rem, 1.5vw);
+}
+
+.img_banner {
+	height: 400px; 
+	width: 100%; 
+	display: flex; 
+	flex-direction: column; 
+	align-items: center; 
+	justify-content: center
+}
+
+.img_banner h1 {
+	margin-bottom: 50px;
+}
+
+.img_banner p {
+	width: 80%;
+}
+
 #teamScroller {
 	width: auto;
 	margin: 0;
