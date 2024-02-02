@@ -63,7 +63,7 @@ rootElement {
 }
 
 .who_banner {
-	max-height: min(200px, calc(100vh - 700px));
+	max-height: max(200px, calc(100vh - 700px));
 }
 
 .img_banner h1 {
