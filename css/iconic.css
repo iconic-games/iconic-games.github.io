@@ -26,6 +26,17 @@ html, body, main {
 
 .icn_page_header {
 	display: flex;
+	top: 0px;
+	flex-direction: column;
+	flex-grow: 0;
+	flex-shrink: 0;
+	width: 100%; 
+	object-fit: cover;
+	object-position: center;
+}
+
+.icn_page_header_top {
+	display: flex;
 	position: absolute;
 	top: 0px;
 	flex-direction: column;
