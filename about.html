@@ -160,60 +160,61 @@
 					</span>
 					<p></p>
 				</div>
-				<div class="img_banner" style="background-image: url('images/landscape-2.png');">
-					<h1>Our Advisors</h1>
-					<p style="text-align: center;">Every adventurer needs a guide now and again, every padawan a master.
-					<br>We’ve assembled some of the best and most successful to help us on our journey.</p>
+				<div style="display: block; min-height: 100vh; scroll-snap-align: center;">
+					<div class="img_banner" style="background-image: url('images/landscape-2.png');">
+						<h1>Our Advisors</h1>
+						<p style="text-align: center;">Every adventurer needs a guide now and again, every padawan a master.
+						<br>We’ve assembled some of the best and most successful to help us on our journey.</p>
+					</div>
+					<div class = "hscroller_container">
+						<div style="display: flex; width: 0px;">
+							<img src="images/left-chevron.png" class="scroller_chevron" style="left: 30px;" onClick="scroller('advisorScroller', -500)">
+						</div>
+						<div class="iconic_scroller iconic_horizontal horizontal_scroller" id="advisorScroller">
+							<div class="team_profile">
+								<img class="team_profile_image" src="images/team/phil-rogers.jpg" alt="Phil Rogers." />
+								<div class="team_profile_text">
+									<h2>Phil Rogers</h2>
+									<h3>Chief Strategic Officer</h3>
+									<h3>Embracer Group</h3>
+									<p>Phil has over 20 years’ experience in the games industry working across start-ups to multinational organisations. He became CEO of Eidos in 2008 and was CEO across Square Enix’s western business from 2009 to 2022. He is currently the Chief Strategy Officer for the Embracer Group as well as CEO for their 12th operating group including Crystal Dynamics.</p>
+								</div>
+						  </div>
+							<div class="team_profile">
+								<img class="team_profile_image" src="images/team/andrew-blake.jpg" alt="Andrew Blake." />
+								<div class="team_profile_text">
+									<h2>Prof. Andrew Blake</h2>
+									<h3>Professor of Machine Intelligence</h3>
+									<h3>University of Cambridge</h3>
+									<p>Professor Andrew Blake was formerly Research Director at The Alan Turing Institute and Laboratory Director of Microsoft Research.</p>
+									<p>He was an academic for 18 years, latterly on the faculty at University of Oxford, where he was a pioneer in the development of the theory and algorithms that can make it possible for computers to behave as seeing machines...</p>
+								</div>
+							</div>
+							<div class="team_profile">
+								<img class="team_profile_image" src="images/team/michael-edelstein.jpg" alt="Michael Edelstein" />
+								<div class="team_profile_text">
+									<h2>Michael Edelstein</h2>
+									<h3>Former President</h3>
+									<h3>NBCUniversal</h3>
+									<p>Michael built NBC Universal International Studios from inception into a global content powerhouse.</p>
+									<p>He was one of the two original Executive Producers of the world-wide phenomenon that is Desperate Housewives and he launched the multi-billion-dollar CSI Franchise for CBS Entertainment.</p>
+								</div>
+							</div>
+							<div class="team_profile">
+								<img class="team_profile_image" src="images/team/chris-heatherly.jpg" alt="Chris Heatherly." />
+								<div class="team_profile_text">
+									<h2>Chris Heatherly</h2>
+									<h3>EVP</h3>
+									<h3>The Walt Disney Company</h3>
+									<p>Chris is a veteran executive in the games industry and has been an innovator and leader at the intersection of entertainment and technology for over 20 yrs. He has run the Games businesses of both Disney and NBCUniversal as general manager and is an experienced brand builder having helped build franchises such as Pixar, Marvel, Star Wars, and Jurassic World into global, multi-billion dollar businesses. He is also an advisor and consultant to startups as well as large media &amp; brand companies, based in Los Angeles.</p>
+								</div>
+							</div>
+						</div>
+						<div style="display: flex; width: 0px;">
+							<img src="images/right-chevron.png" class="scroller_chevron" style="left:-30px;" onClick="scroller('advisorScroller', 500)">
+						</div>
+					</div>
 				</div>
-				<div class = "hscroller_container">
-					<div style="display: flex; width: 0px;">
-						<img src="images/left-chevron.png" class="scroller_chevron" style="left: 30px;" onClick="scroller('advisorScroller', -500)">
-					</div>
-					<div class="iconic_scroller iconic_horizontal horizontal_scroller" id="advisorScroller">
-						<div class="team_profile">
-							<img class="team_profile_image" src="images/team/phil-rogers.jpg" alt="Phil Rogers." />
-							<div class="team_profile_text">
-								<h2>Phil Rogers</h2>
-								<h3>Chief Strategic Officer</h3>
-								<h3>Embracer Group</h3>
-								<p>Phil has over 20 years’ experience in the games industry working across start-ups to multinational organisations. He became CEO of Eidos in 2008 and was CEO across Square Enix’s western business from 2009 to 2022. He is currently the Chief Strategy Officer for the Embracer Group as well as CEO for their 12th operating group including Crystal Dynamics.</p>
-							</div>
-					  </div>
-						<div class="team_profile">
-							<img class="team_profile_image" src="images/team/andrew-blake.jpg" alt="Andrew Blake." />
-							<div class="team_profile_text">
-								<h2>Prof. Andrew Blake</h2>
-								<h3>Professor of Machine Intelligence</h3>
-								<h3>University of Cambridge</h3>
-								<p>Professor Andrew Blake was formerly Research Director at The Alan Turing Institute and Laboratory Director of Microsoft Research.</p>
-								<p>He was an academic for 18 years, latterly on the faculty at University of Oxford, where he was a pioneer in the development of the theory and algorithms that can make it possible for computers to behave as seeing machines...</p>
-							</div>
-						</div>
-						<div class="team_profile">
-							<img class="team_profile_image" src="images/team/michael-edelstein.jpg" alt="Michael Edelstein" />
-							<div class="team_profile_text">
-								<h2>Michael Edelstein</h2>
-								<h3>Former President</h3>
-								<h3>NBCUniversal</h3>
-								<p>Michael built NBC Universal International Studios from inception into a global content powerhouse.</p>
-								<p>He was one of the two original Executive Producers of the world-wide phenomenon that is Desperate Housewives and he launched the multi-billion-dollar CSI Franchise for CBS Entertainment.</p>
-							</div>
-						</div>
-						<div class="team_profile">
-							<img class="team_profile_image" src="images/team/chris-heatherly.jpg" alt="Chris Heatherly." />
-							<div class="team_profile_text">
-								<h2>Chris Heatherly</h2>
-								<h3>EVP</h3>
-								<h3>The Walt Disney Company</h3>
-								<p>Chris is a veteran executive in the games industry and has been an innovator and leader at the intersection of entertainment and technology for over 20 yrs. He has run the Games businesses of both Disney and NBCUniversal as general manager and is an experienced brand builder having helped build franchises such as Pixar, Marvel, Star Wars, and Jurassic World into global, multi-billion dollar businesses. He is also an advisor and consultant to startups as well as large media &amp; brand companies, based in Los Angeles.</p>
-							</div>
-						</div>
-					</div>
-					<div style="display: flex; width: 0px;">
-						<img src="images/right-chevron.png" class="scroller_chevron" style="left:-30px;" onClick="scroller('advisorScroller', 500)">
-					</div>
-				</div>
-				<p></p>
 				<img src="images/landscape-3.png" style="height: 400px; width: 100%; object-fit: cover; object-position: left;" >
 			</div>
 		</div>
