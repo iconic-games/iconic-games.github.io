@@ -33,12 +33,19 @@ rootElement {
 }
 
 .division {
-	display: flex;
-	min-height:100vh;
+	display: flex; 
+	flex-direction: column; 
+	min-height: 100vh; 
 	scroll-snap-align: start;
 }
 
-.division p {
+.division_text {
+	display: flex; 
+	vertical-align: middle; 
+	flex-grow: 1;
+}
+
+.division_text p {
 	padding: 0 10vw 0 10vw; 
 	text-align: center; 
 	justify-content: center; 
@@ -52,7 +59,11 @@ rootElement {
 	display: flex; 
 	flex-direction: column; 
 	align-items: center; 
-	justify-content: center
+	justify-content: center;
+}
+
+.who_banner {
+	max-height: min(200px, calc(100vh - 700px));
 }
 
 .img_banner h1 {
