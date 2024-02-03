@@ -19,53 +19,60 @@ function getParentScroller(element) {
 
 let lastWheelTime = 0;
 function applyWheelScroll(scroller, delta) {
-	if(scroller != null) {
-		// Check if scroller is fully on screen
-		const scrollerRect = scroller.getBoundingClientRect();
-		const oneRem = parseInt(getComputedStyle(document.documentElement).fontSize);
-		const scrollerStyle = window.getComputedStyle(scroller);
-		const horizontal = scrollerStyle.flexDirection == "row" || scrollerStyle.flexDirection == "row-reverse";
-		const onScreen = !horizontal || ((scrollerRect.bottom + oneRem) <= (window.innerHeight || document.documentElement.clientHeight) && scrollerRect.top > 0);
-		
-		if(!onScreen) {
-			applyWheelScroll(getParentScroller(scroller.parentElement), delta);
-		} else if(horizontal) {
-			if (delta > 0) {
-				if(scroller.scrollLeft >= scroller.scrollWidth - scroller.clientWidth) {
-					applyWheelScroll(getParentScroller(scroller.parentElement), delta);
-				} else {
-					const d = new Date();
-					const now = d.getTime();
-					if(now < lastWheelTime + 250) {
-						return;
-					}
-					lastWheelTime = d.getTime();
-					scroller.scrollBy({
-						left: 200,
-						behavior: "smooth",
-					});
-				}
-			}
-			else {
-				if(scroller.scrollLeft <= 0) {
-					applyWheelScroll(getParentScroller(scroller.parentElement), delta);
-				} else {
-					const d = new Date();
-					const now = d.getTime();
-					if(now < lastWheelTime + 250) {
-						return;
-					}
-					lastWheelTime = d.getTime();
-					scroller.scrollBy({
-						left: -200,
-						behavior: "smooth",
-					});
-				}
-			}
-		} else {
-			scroller.scrollTop += delta;
-		}	
+	if(scroller == null) {
+		return false;
 	}
+	// Check if scroller is fully on screen
+	const scrollerRect = scroller.getBoundingClientRect();
+	const oneRem = parseInt(getComputedStyle(document.documentElement).fontSize);
+	const scrollerStyle = window.getComputedStyle(scroller);
+	const horizontal = scrollerStyle.flexDirection == "row" || scrollerStyle.flexDirection == "row-reverse";
+	const onScreen = !horizontal || ((scrollerRect.bottom + oneRem) <= (window.innerHeight || document.documentElement.clientHeight) && scrollerRect.top > 0);
+
+	if(!onScreen) {
+		applyWheelScroll(getParentScroller(scroller.parentElement), delta);
+	} else if(horizontal) {
+		if (delta > 0) {
+			if(scroller.scrollLeft >= scroller.scrollWidth - scroller.clientWidth) {
+				return applyWheelScroll(getParentScroller(scroller.parentElement), delta);
+			} else {
+				const d = new Date();
+				const now = d.getTime();
+				if(now < lastWheelTime + 200) {
+					return true;
+				}
+				lastWheelTime = d.getTime();
+				scroller.scrollBy({
+					left: 200,
+					behavior: "smooth",
+				});
+				return true;
+			}
+		}
+		else {
+			if(scroller.scrollLeft <= 0) {
+				return applyWheelScroll(getParentScroller(scroller.parentElement), delta);
+			} else {
+				const d = new Date();
+				const now = d.getTime();
+				if(now < lastWheelTime + 200) {
+					return true;
+				}
+				lastWheelTime = d.getTime();
+				scroller.scrollBy({
+					left: -200,
+					behavior: "smooth",
+				});
+				return true;
+			}
+		}
+	} else {
+		scroller.scrollBy({
+			top:  delta,
+			behavior: 'smooth'
+		  });
+		return true;
+	}	
 }
 
 window.addEventListener("wheel", e => {
@@ -74,13 +81,13 @@ window.addEventListener("wheel", e => {
 		return;
 	}
 	
-	e.preventDefault();
-	e.stopImmediatePropagation();
-	
 	let hoverElement = document.elementFromPoint(mouseX, mouseY);
 	let hoverScroller = getParentScroller(hoverElement);
 	
-	applyWheelScroll(hoverScroller, e.deltaY);
+	if(applyWheelScroll(hoverScroller, e.deltaY)) {
+		e.preventDefault();
+		e.stopImmediatePropagation();
+	}
 }, {passive: false});
 
 function showCulture() {
