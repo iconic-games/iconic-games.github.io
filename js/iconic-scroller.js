@@ -30,7 +30,7 @@ function applyWheelScroll(scroller, delta) {
 	const onScreen = !horizontal || ((scrollerRect.bottom + oneRem) <= (window.innerHeight || document.documentElement.clientHeight) && scrollerRect.top > 0);
 
 	if(!onScreen) {
-		applyWheelScroll(getParentScroller(scroller.parentElement), delta);
+		return applyWheelScroll(getParentScroller(scroller.parentElement), delta);
 	} else if(horizontal) {
 		if (delta > 0) {
 			if(scroller.scrollLeft >= scroller.scrollWidth - scroller.clientWidth) {

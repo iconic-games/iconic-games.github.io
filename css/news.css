@@ -27,6 +27,7 @@ body, html, main {
 .news_card {
 	flex-direction: column; 
 	margin: 1rem;
+	scroll-snap-align: start;
 }
 
 .news_text {
