@@ -17,6 +17,113 @@ body, html, main {
 	color: white;
 }
 
+/* Timeline Container */
+.timeline {
+	background: var(--primary-color);
+	margin: 20px auto;
+	padding: 20px;
+}
+
+/* Card container */
+.card {
+	position: relative;
+	max-width: 1200px;
+	scroll-snap-align: start;
+}
+
+/* setting padding based on even or odd */
+.card:nth-child(odd) {
+  padding: 30px 0 30px 30px;
+}
+.card:nth-child(even) {
+  padding: 30px 30px 30px 0;
+}
+/* Global ::before */
+.card::before {
+  content: "";
+  position: absolute;
+  width: 50%;
+  border: solid orangered;
+}
+
+/* Setting the border of top, bottom, left */
+.card:nth-child(odd)::before {
+  left: 0px;
+  top: -4.5px;
+  bottom: -4.5px;
+  border-width: 5px 0 5px 5px;
+  border-radius: 50px 0 0 50px;
+}
+
+/* Setting the border of top, bottom, right */
+.card:nth-child(even)::before {
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border-width: 5px 5px 5px 0;
+  border-radius: 0 50px 50px 0;
+}
+
+/* Removing the border if it is the first card */
+.card:first-child::before {
+  border-top: 0;
+  border-top-left-radius: 0;
+}
+
+/* Removing the border if it is the last card  and it's odd */
+.card:last-child:nth-child(odd)::before {
+  border-bottom: 0;
+  border-bottom-left-radius: 0;
+}
+
+/* Removing the border if it is the last card  and it's even */
+.card:last-child:nth-child(even)::before {
+  border-bottom: 0;
+  border-bottom-right-radius: 0;
+}
+
+/* Information about the timeline */
+.info {
+  display: flex;
+  flex-direction: column;
+  background: #333;
+  color: gray;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+/* Title of the card */
+.title {
+  color: orangered;
+  position: relative;
+}
+
+/* Timeline dot  */
+.title::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 999px;
+  border: 3px solid orangered;
+}
+
+/* text right if the card is even  */
+.card:nth-child(even) > .info > .title {
+  text-align: right;
+}
+
+/* setting dot to the left if the card is odd */
+.card:nth-child(odd) > .info > .title::before {
+  left: -45px;
+}
+
+/* setting dot to the right if the card is odd */
+.card:nth-child(even) > .info > .title::before {
+  right: -45px;
+}
+
 .news_scroller {
 	align-self: center;
 	flex-direction: column;
@@ -24,18 +131,7 @@ body, html, main {
 	max-width: 60vw;
 }
 
-.news_card {
-	flex-direction: column; 
-	margin: 1rem;
-	scroll-snap-align: start;
-}
-
-.news_text {
-	display:flex; 
-	flex-direction: column;
-}
-
-.news_card img {
+.card img {
 	float: left; 
 	margin: 1rem 1rem 1rem 0;
 	max-width: 20vw;
@@ -47,7 +143,7 @@ body, html, main {
 	border-radius: 1rem;
 }
 
-.news_card h1 {
+.card h1 {
 	margin 0;
 	padding: 0;
 	margin-inline-start: 0;
@@ -56,24 +152,11 @@ body, html, main {
 	color: gold;
 }
 
-.news_card h2 {
+.card h2 {
 	margin 0;
 	margin-block-end: 0.2rem;
 	margin-block-start: 0.5rem;
 	color: whitesmoke;
-}
-
-.news_card h3 {
-	margin 0;
-	margin-block-end: 0;
-	margin-block-start: 0.25rem;
-	color: darkgray;
-}
-
-.news_card p {
-	font-family: "Franklin Gothic", "Arial", "sans-serif";
-	font-size: max(1.25rem, 1.25vw);
-	line-height: normal;
 }
 
 @media only screen and (max-width: 1000px) {	
