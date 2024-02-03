@@ -280,6 +280,10 @@ nav a:hover {
 		font-size: clamp(1rem, 1vh, 1.5rem);
 	}
 	
+	ul {
+		padding-left: 1.5em;
+	}
+	
 	li {
 		font-family: Noto Sans, sans-serif;
 		font-size: clamp(1rem, 1vh, 1.5rem);
