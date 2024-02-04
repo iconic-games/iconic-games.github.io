@@ -141,6 +141,7 @@ rootElement {
 	min-width: 100%; 
 	max-height: min(20vh, 800px);
 	object-fit: cover;
+	transition: 2s;
 }
 
 #jdTitle {
