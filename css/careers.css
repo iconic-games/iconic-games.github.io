@@ -204,7 +204,7 @@ p {
 
 .job-list-parent {
 	display: flex;
-	height: 100%;
+	height: auto;
 	width: 100%;
 	justify-content: center;
 }
@@ -310,17 +310,20 @@ p {
 .culture_card {
 	width: auto;
 	height: 80%;
+	min-height: 500px;
 	max-height: 600px;
 	object-fit: cover;
 	object-position: center;
 	display: flex;
 	flex-direction: row-reverse;
-	margin: 0 0.5rem;
+	margin: 1rem 0.5rem;
 	background-size: cover;
-	background-color: hsla(0,0%,0%,0.84);
+	background-color: hsla(0,0%,0%,0.8);
 	background-blend-mode: darken;
 	scroll-snap-align: start;
 	padding: 1rem;
+	border-radius: 1.8rem;
+	scroll-snap-align: start;
 }
 
 .culture_text {
