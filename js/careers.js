@@ -252,6 +252,10 @@ document.addEventListener('DOMContentLoaded', function (e) {
 			newRoleSummary.appendChild(newRoleTitle);
 			newRoleSummary.appendChild(newRoleSynopsis);
 			newRole.appendChild(newRoleSummary);
+			
+			if(i+1 == roles.length) {
+				newRole.style.marginBottom = "10vh";
+			}
 
 			jobslist.appendChild(newRole);
 		}
