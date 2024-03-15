@@ -551,6 +551,10 @@ p {
 		display: none;
 		font-size: clamp(1rem, 1.75vh, 4rem);
 	}
+	
+	.last-role {
+		margin-bottom: 10vh;
+	}
 }
 
 .fitText {
