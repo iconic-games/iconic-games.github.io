@@ -5,17 +5,19 @@ const roles = [
 		name: 'Principal Technical Designer',
 		image: 'images/job-4.png',
 		imageWide: 'images/job-4ws.png',
-		synopsis: 'Designing games. Dream job innit.',
+		synopsis: 'Creative and technical. The complete package.',
 		bg: 'url(images/steampunk.png)',
-		overview: '<p>We’re looking for an Open World Designer to join our team in London. You will need boundless creativity to fill our game worlds with believable and exciting content, creating unforgettable gaming experiences for our players. You will be responsible for designing and implementing open-world environments that align with the game’s creative vision and technical requirements.</p>',
+		overview: '<p>We’re looking for a Principal Technical Designer to join our team. You should have a passion for building and playing games and extensive, broad and deep understanding of the design and technical aspects of their creation.</p>',
 		duties: [
-			'Maintaining the highest possible quality of open world content and fixing reported bugs.',
-			'Champion a cohesive design vision that upholds the game’s pillars.',
-			'Develop and oversee the rules and metrics for gameplay spaces.',
-			'Cooperate with other departments.',
-			'Create and maintaining documentation.',
+			'Work closely with the design team, contributing to the game design.',
+			'Identify technical challenges and opportunities to innovate.',
+			'Champion the use of generative AI to enhance rather than replace human creativity in the studio.',
+			'Rapidly experiment and prototype to prove new features and gameplay.',
+			'Support the engineering teams and help to devise truly innovative and new types of gameplay to our players.',
+			'Mentor, coach and guide juniors in the studio.',
 			'Use Unreal Engine 5 to design, whitebox, validate, iterate, and polish game worlds that deliver valuable experiences to players.',
 			'Regularly play the game and provide constructive feedback to other members of the team.',
+			
 		],
 		required: [
 			'Shipped at least two prominent titles.',
@@ -28,7 +30,7 @@ const roles = [
 		],
 		bonus: [
 			'Experience working on open world games.',
-			'Shipped a title using Unreal Blueprints.',
+			'Shipped a title using Unreal Engine 5.',
 		]
 	},
 	{
