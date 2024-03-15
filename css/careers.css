@@ -223,7 +223,6 @@ p {
 	mask-image: linear-gradient(to left, transparent 0%, black 1%, black 99%, transparent 100%);
 	align-content: center;
 	align-items: center;
-	justify-content: center;
 }
 
 .job_card {
@@ -353,6 +352,15 @@ p {
 
 .culture_text p {
 	font-size: 1rem;
+}
+
+
+.first-role {
+	margin-left: 10vw;
+}
+
+.last-role {
+	margin-right: 10vw;
 }
 
 @media only screen and (max-width: 1600px) {
@@ -555,7 +563,13 @@ p {
 		font-size: clamp(1rem, 1.75vh, 4rem);
 	}
 	
+	.first-role {
+		margin-left: unset;
+		margin-top: 10vh;
+	}
+	
 	.last-role {
+		margin-right: unset;
 		margin-bottom: 10vh;
 	}
 }

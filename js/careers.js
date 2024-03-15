@@ -193,6 +193,9 @@ document.addEventListener('DOMContentLoaded', function (e) {
 			newRoleSummary.appendChild(newRoleSynopsis);
 			newRole.appendChild(newRoleSummary);
 			
+			if(i == 0) {
+				newRole.classList += " first-role";
+			}
 			if(i+1 == roles.length) {
 				newRole.classList += " last-role";
 			}
